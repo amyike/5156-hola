@@ -20,7 +20,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class Bmi extends Activity {
+public class BmiActivity extends Activity {
 	private static final String TAG = "Bmi";
 	static final String[] FEETS = { "2 Feet", "3 Feet", "4 Feet", "5 Feet",
 			"6 Feet", "7 Feet", "8 Feet" };
@@ -118,7 +118,7 @@ public class Bmi extends Activity {
 		public void onItemSelected(AdapterView<?> adapterview, View view,
 				int i, long l) {
 			feet = adapterview.getSelectedItemPosition() + 2;
-			Toast.makeText(Bmi.this, feet + "", Toast.LENGTH_SHORT).show();
+			Toast.makeText(BmiActivity.this, feet + "", Toast.LENGTH_SHORT).show();
 		}
 
 		public void onNothingSelected(AdapterView<?> adapterview) {
@@ -140,7 +140,7 @@ public class Bmi extends Activity {
 
 		public void onClick(View v) {
 			Intent intent = new Intent();
-			intent.setClass(Bmi.this, Report.class);
+			intent.setClass(BmiActivity.this, ReportActivity.class);
 			Bundle bundle = new Bundle();
 			bundle.putDouble("KEY_HEIGHT", (feet * 12 + inch) * 2.54 / 100);//
 			bundle.putDouble("KEY_WEIGHT",
@@ -152,7 +152,7 @@ public class Bmi extends Activity {
 
 	private void openOptionsDialog() {
 
-		new AlertDialog.Builder(Bmi.this)
+		new AlertDialog.Builder(BmiActivity.this)
 				.setTitle(R.string.about_title)
 				.setMessage(R.string.about_msg)
 				.setPositiveButton(R.string.ok_lable,

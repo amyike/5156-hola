@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Report extends Activity {
+public class ReportActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -73,7 +73,7 @@ public class Report extends Activity {
 	private OnClickListener backMain = new OnClickListener() {
 		public void onClick(View view) {
 			// Close this Activity
-			Report.this.finish();
+			ReportActivity.this.finish();
 		}
 	};
 
@@ -85,9 +85,9 @@ public class Report extends Activity {
 				System.currentTimeMillis());
 
 		PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-				new Intent(this, Bmi.class), PendingIntent.FLAG_UPDATE_CURRENT);
+				new Intent(this, BmiActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
 
-		barMsg.setLatestEventInfo(Report.this, "你的 BMI 值过高", "通知监督人",
+		barMsg.setLatestEventInfo(ReportActivity.this, "你的 BMI 值过高", "通知监督人",
 				contentIntent);
 
 		barManager.notify(0, barMsg);
