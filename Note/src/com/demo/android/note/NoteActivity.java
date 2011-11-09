@@ -11,6 +11,8 @@ public class NoteActivity extends ListActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		// Tell the list view which view to display when the list is empty
+
 		// setAdapter();
 	}
 
