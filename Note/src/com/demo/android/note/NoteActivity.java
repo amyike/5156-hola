@@ -12,8 +12,9 @@ public class NoteActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		// Tell the list view which view to display when the list is empty
+		getListView().setEmptyView(findViewById(R.id.empty));
 
-		// setAdapter();
+		setAdapter();
 	}
 
 	private final String[] note_array = { "gasolin", "crota", "louk",
