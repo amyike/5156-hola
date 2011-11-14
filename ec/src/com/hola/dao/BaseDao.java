@@ -1,5 +1,8 @@
 package com.hola.dao;
 
-public interface BaseDao {
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+public abstract class BaseDao<K, T> extends HibernateDaoSupport implements
+		IBaseDao<K, T> {
 
 }
