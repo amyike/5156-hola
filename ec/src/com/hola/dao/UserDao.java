@@ -1,17 +1,14 @@
 package com.hola.dao;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.hibernate.Criteria;
 
+import com.hola.Exception.BizException;
 import com.hola.pojo.User;
 
-public class UserDao extends BaseDao<Long, User> {
-
-	@Override
-	public User find(final Long key) {
-		return getHibernateTemplate().get(User.class, key);
-	}
+public class UserDao extends BaseDao<User> {
 
 	@Override
 	public List<User> find(final int pageIndex, final int pageSize) {
@@ -28,18 +25,23 @@ public class UserDao extends BaseDao<Long, User> {
 	}
 
 	@Override
-	public void create(final User pojo) {
-		getHibernateTemplate().save(pojo);
+	public void create(final User user) {
+		getHibernateTemplate().save(user);
 	}
 
 	@Override
-	public void update(final User pojo) {
-		getHibernateTemplate().update(pojo);
+	public void update(final User user) {
+		getHibernateTemplate().update(user);
 	}
 
 	@Override
-	public void delete(final Long key) {
-		getHibernateTemplate().delete(find(key));
+	public User find(Serializable id) throws BizException {
+		return getHibernateTemplate().get(User.class, id);
+	}
+
+	@Override
+	public void delete(Serializable id) throws BizException {
+		getHibernateTemplate().delete(find(id));
 	}
 
 }

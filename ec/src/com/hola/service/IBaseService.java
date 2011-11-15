@@ -1,53 +1,59 @@
 package com.hola.service;
 
+import java.io.Serializable;
 import java.util.List;
 
-public interface IBaseService<K, T> {
+import com.hola.Exception.BizException;
+
+public interface IBaseService<T> {
 	/**
-	 * 根据 ID 查询
+	 * 鏍规嵁 ID 鏌ヨ
 	 * 
-	 * @param key
+	 * @param id
 	 * @return
+	 * @throws BizException
 	 */
-	T find(final K key);
+	T find(final Serializable id) throws BizException;
 
 	/**
-	 * 分页查询
+	 * 鍒嗛〉鏌ヨ
 	 * 
 	 * @param pageIndex
 	 * @param pageSize
 	 * @return
+	 * @throws BizException
 	 */
-	List<T> find(final int pageIndex, final int pageSize);
+	List<T> find(final int pageIndex, final int pageSize) throws BizException;
 
 	/**
-	 * 获取总数
+	 * 鑾峰彇鏁版嵁鎬绘暟
 	 * 
 	 * @return
+	 * @throws BizException
 	 */
-	int count();
+	int count() throws BizException;
 
 	/**
-	 * 添加
-	 * 
-	 * @param pojo
-	 * @return
-	 */
-	void create(final T pojo);
-
-	/**
-	 * 更新
+	 * 娣诲姞
 	 * 
 	 * @param pojo
-	 * @return
+	 * @throws BizException
 	 */
-	void update(final T pojo);
+	void create(final T pojo) throws BizException;
 
 	/**
-	 * 删除
+	 * 鏇存柊
 	 * 
-	 * @param key
-	 * @return
+	 * @param pojo
+	 * @throws BizException
 	 */
-	void delete(final K key);
+	void update(final T pojo) throws BizException;
+
+	/**
+	 * 鏍规嵁 ID 鍒犻櫎
+	 * 
+	 * @param id
+	 * @throws BizException
+	 */
+	void delete(final Serializable id) throws BizException;
 }

@@ -1,5 +1,6 @@
 package com.hola.dao;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.hola.Exception.BizException;
@@ -10,19 +11,18 @@ import com.hola.Exception.BizException;
  * 
  * @see Dao 层基类
  * 
- * @param <K>
- *            Key
  * @param <T>
  *            Type
  */
-public interface IBaseDao<K, T> {
+public interface IBaseDao<T> {
 	/**
 	 * 根据 ID 查询
 	 * 
-	 * @param key
+	 * @param id
 	 * @return
+	 * @throws BizException
 	 */
-	T find(final K key) throws BizException;
+	T find(final Serializable id) throws BizException;
 
 	/**
 	 * 分页查询
@@ -30,13 +30,15 @@ public interface IBaseDao<K, T> {
 	 * @param pageIndex
 	 * @param pageSize
 	 * @return
+	 * @throws BizException
 	 */
 	List<T> find(final int pageIndex, final int pageSize) throws BizException;
 
 	/**
-	 * 获取总数
+	 * 获取数据总数
 	 * 
 	 * @return
+	 * @throws BizException
 	 */
 	int count() throws BizException;
 
@@ -44,7 +46,7 @@ public interface IBaseDao<K, T> {
 	 * 添加
 	 * 
 	 * @param pojo
-	 * @return
+	 * @throws BizException
 	 */
 	void create(final T pojo) throws BizException;
 
@@ -52,15 +54,15 @@ public interface IBaseDao<K, T> {
 	 * 更新
 	 * 
 	 * @param pojo
-	 * @return
+	 * @throws BizException
 	 */
 	void update(final T pojo) throws BizException;
 
 	/**
-	 * 删除
+	 * 根据 ID 删除
 	 * 
-	 * @param key
-	 * @return
+	 * @param id
+	 * @throws BizException
 	 */
-	void delete(final K key) throws BizException;
+	void delete(final Serializable id) throws BizException;
 }
