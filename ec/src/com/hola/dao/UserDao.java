@@ -6,13 +6,13 @@ import java.util.List;
 import org.hibernate.Criteria;
 
 import com.hola.Exception.BizException;
-import com.hola.pojo.User;
+import com.hola.pojo.UserPojo;
 
-public class UserDao extends BaseDao<User> {
+public class UserDao extends BaseDao<UserPojo> {
 
 	@Override
-	public List<User> find(final int pageIndex, final int pageSize) {
-		Criteria criteria = getSession().createCriteria(User.class);
+	public List<UserPojo> find(final int pageIndex, final int pageSize) {
+		Criteria criteria = getSession().createCriteria(UserPojo.class);
 		criteria.setFirstResult(pageIndex);
 		criteria.setMaxResults(pageIndex);
 		return criteria.list();
@@ -25,18 +25,18 @@ public class UserDao extends BaseDao<User> {
 	}
 
 	@Override
-	public void create(final User user) {
+	public void create(final UserPojo user) {
 		getHibernateTemplate().save(user);
 	}
 
 	@Override
-	public void update(final User user) {
+	public void update(final UserPojo user) {
 		getHibernateTemplate().update(user);
 	}
 
 	@Override
-	public User find(Serializable id) throws BizException {
-		return getHibernateTemplate().get(User.class, id);
+	public UserPojo find(Serializable id) throws BizException {
+		return getHibernateTemplate().get(UserPojo.class, id);
 	}
 
 	@Override

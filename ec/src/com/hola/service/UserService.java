@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.hola.Exception.BizException;
 import com.hola.dao.UserDao;
-import com.hola.pojo.User;
+import com.hola.pojo.UserPojo;
 
-public class UserService implements IBaseService<User> {
+public class UserService extends BaseService<UserPojo> {
 	@Autowired
 	private UserDao userDao;
 
 	@Override
-	public List<User> find(int pageIndex, int pageSize) {
+	public List<UserPojo> find(int pageIndex, int pageSize) {
 		return userDao.find(pageIndex, pageSize);
 	}
 
@@ -24,17 +24,17 @@ public class UserService implements IBaseService<User> {
 	}
 
 	@Override
-	public void create(User user) {
+	public void create(UserPojo user) {
 		userDao.create(user);
 	}
 
 	@Override
-	public void update(User user) {
+	public void update(UserPojo user) {
 		userDao.update(user);
 	}
 
 	@Override
-	public User find(Serializable id) throws BizException {
+	public UserPojo find(Serializable id) throws BizException {
 		return userDao.find(id);
 	}
 

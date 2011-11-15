@@ -5,6 +5,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "")
-public class User {
+public class UserPojo extends BasePojo {
+
+	private static final long serialVersionUID = 1L;
 
 }

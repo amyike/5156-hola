@@ -5,6 +5,14 @@ import java.util.List;
 
 import com.hola.Exception.BizException;
 
+/**
+ * 
+ * @author yike
+ * 
+ * @see Service 层基类
+ * 
+ * @param <T>
+ */
 public interface IBaseService<T> {
 	/**
 	 * 根据 ID 查询
