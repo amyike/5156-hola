@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.hola.pojo.User;
+
 /**
  * @author: dxl
  * @createDate: 2011-08-02
@@ -22,9 +24,8 @@ public class WebHandlerInterceptor implements HandlerInterceptor {
 			return true;
 		}
 		// 验证是否存在有效会话。若不存在则视为非法请求，重定向到登录页面
-		UserInfo userInfo = (UserInfo) request.getSession().getAttribute(
-				"userInfo");
-		if (userInfo == null) {
+		User user = (User) request.getSession().getAttribute("user");
+		if (user == null) {
 			// response.sendRedirect("/");
 			return false;
 		}
