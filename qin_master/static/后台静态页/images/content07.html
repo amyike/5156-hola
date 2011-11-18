@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body>
+<div class="so_main">
+
+  <div id="search_div" style="display:none;">
+    <div class="page_tit">搜索通知 [ <a href="javascript:void(0);" onClick="searchNotify();">隐藏</a> ]</div>
+    <div class="form2">
+    <form method="post" action="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=doSearchNotify">
+    <input name="isSearch" value="1" type="hidden">
+    <dl class="lineD">
+      <dt>ID：</dt>
+      <dd>
+        <input name="notify_id" type="text">
+        <p>多个时使用英文的“,”分割</p>
+      </dd>
+    </dl>
+    
+    <dl class="lineD">
+      <dt>发送人ID：</dt>
+      <dd>
+        <input name="from" type="text">
+        <p>用户ID,多个时使用英文的","分割</p>
+      </dd>
+    </dl>
+    
+    <dl class="lineD">
+      <dt>接收人ID：</dt>
+      <dd>
+        <input name="receive" type="text">
+        <p>用户ID,多个时使用英文的","分割</p>
+      </dd>
+    </dl>
+    
+    <dl class="lineD">
+      <dt>类型：</dt>
+      <dd>
+        <select name="type">
+            <option value="" selected="selected"> - </option>
+            <option value="weibo_follow">weibo_follow</option>        </select>
+      </dd>
+    </dl>
+    <div class="page_btm">
+      <input class="btn_b" value="确定" type="submit">
+    </div>
+    <input name="__hash__" value="6e8d5355041b6c1c62de6f6a956a664c" type="hidden"></form>
+  </div>
+  </div>
+  
+  <div class="page_tit">通知管理</div>
+  <div class="Toolbar_inbox">
+    <div class="page right">共33条记录&nbsp;&nbsp;&nbsp;<span class="disabled&quot;">上一页 </span> <span class="current">1</span><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=notify&amp;p=2">2</a><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=notify&amp;p=2">下一页</a></div>
+    <a href="javascript:void(0);" class="btn_a" onClick="searchNotify();">
+        <span class="search_action">搜索通知</span>
+    </a>
+    <a href="javascript:void(0);" class="btn_a" onClick="deleteRecord();"><span>删除记录</span></a>
+  </div>
+  <div class="list">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <th style="width: 30px;">
+        <input id="checkbox_handle" onClick="checkAll(this)" value="0" type="checkbox">
+        <label for="checkbox"></label>
+    </th>
+    <th class="line_l">ID</th>
+    <th class="line_l">发起人</th>
+    <th class="line_l">接收人</th>
+    <th class="line_l">类型</th>
+    <th class="line_l">标题</th>
+    <th class="line_l">内容</th>
+    <th class="line_l">时间</th>
+    <th class="line_l">操作</th>
+  </tr>
+  <tr overstyle="on" id="notify_33">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="33" type="checkbox"></td>
+        <td>33</td>
+        <td>10<br>KimiSong</td>
+        <td>1<br>管理员</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=10" class="fn" target="_blank">KimiSong</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-16 17:21</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('33')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="notify_32">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="32" type="checkbox"></td>
+        <td>32</td>
+        <td>1<br>管理员</td>
+        <td>10<br>KimiSong</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=1" class="fn" target="_blank">管理员</a><img class="ts_icon" src="index_data/v_05.gif" title="管理员"> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-16 17:21</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('32')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="notify_31">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="31" type="checkbox"></td>
+        <td>31</td>
+        <td>8<br>123456</td>
+        <td>18<br>别人都说我的名字长</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=8" class="fn" target="_blank">123456</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-16 17:15</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('31')">删除</a></td>
+      </tr><tr overstyle="on" id="notify_30">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="30" type="checkbox"></td>
+        <td>30</td>
+        <td>20<br>hhmmss</td>
+        <td>1<br>管理员</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=20" class="fn" target="_blank">hhmmss</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-16 16:29</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('30')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="notify_29">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="29" type="checkbox"></td>
+        <td>29</td>
+        <td>1<br>管理员</td>
+        <td>20<br>hhmmss</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=1" class="fn" target="_blank">管理员</a><img class="ts_icon" src="index_data/v_05.gif" title="管理员"> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-16 16:29</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('29')">删除</a></td>
+      </tr><tr overstyle="on" id="notify_28">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="28" type="checkbox"></td>
+        <td>28</td>
+        <td>19<br>小龙</td>
+        <td>1<br>管理员</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=19" class="fn" target="_blank">小龙</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-16 16:28</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('28')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="notify_27">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="27" type="checkbox"></td>
+        <td>27</td>
+        <td>1<br>管理员</td>
+        <td>19<br>小龙</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=1" class="fn" target="_blank">管理员</a><img class="ts_icon" src="index_data/v_05.gif" title="管理员"> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-16 16:28</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('27')">删除</a></td>
+      </tr><tr overstyle="on" id="notify_26">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="26" type="checkbox"></td>
+        <td>26</td>
+        <td>18<br>别人都说我的名字长</td>
+        <td>1<br>管理员</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=18" class="fn" target="_blank">别人都说我的名字长</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-16 16:09</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('26')">删除</a></td>
+      </tr><tr overstyle="on" id="notify_25">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="25" type="checkbox"></td>
+        <td>25</td>
+        <td>1<br>管理员</td>
+        <td>18<br>别人都说我的名字长</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=1" class="fn" target="_blank">管理员</a><img class="ts_icon" src="index_data/v_05.gif" title="管理员"> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-16 16:09</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('25')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="notify_24">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="24" type="checkbox"></td>
+        <td>24</td>
+        <td>16<br>哈哈</td>
+        <td>1<br>管理员</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=16" class="fn" target="_blank">哈哈</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-10 16:18</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('24')">删除</a></td>
+      </tr><tr overstyle="on" id="notify_23">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="23" type="checkbox"></td>
+        <td>23</td>
+        <td>1<br>管理员</td>
+        <td>16<br>哈哈</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=1" class="fn" target="_blank">管理员</a><img class="ts_icon" src="index_data/v_05.gif" title="管理员"> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-10 16:18</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('23')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="notify_22">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="22" type="checkbox"></td>
+        <td>22</td>
+        <td>13<br>洪哥</td>
+        <td>5<br>wangfeng3</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=13" class="fn" target="_blank">洪哥</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-10 10:18</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('22')">删除</a></td>
+      </tr><tr overstyle="on" id="notify_21">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="21" type="checkbox"></td>
+        <td>21</td>
+        <td>13<br>洪哥</td>
+        <td>12<br>东东</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=13" class="fn" target="_blank">洪哥</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-10 10:17</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('21')">删除</a></td>
+      </tr><tr overstyle="on" id="notify_20">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="20" type="checkbox"></td>
+        <td>20</td>
+        <td>13<br>洪哥</td>
+        <td>1<br>管理员</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=13" class="fn" target="_blank">洪哥</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-07 22:18</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('20')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="notify_19">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="19" type="checkbox"></td>
+        <td>19</td>
+        <td>1<br>管理员</td>
+        <td>13<br>洪哥</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=1" class="fn" target="_blank">管理员</a><img class="ts_icon" src="index_data/v_05.gif" title="管理员"> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-07 22:18</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('19')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="notify_18">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="18" type="checkbox"></td>
+        <td>18</td>
+        <td>12<br>东东</td>
+        <td>1<br>管理员</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=12" class="fn" target="_blank">东东</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-06 21:18</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('18')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="notify_17">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="17" type="checkbox"></td>
+        <td>17</td>
+        <td>1<br>管理员</td>
+        <td>12<br>东东</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=1" class="fn" target="_blank">管理员</a><img class="ts_icon" src="index_data/v_05.gif" title="管理员"> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-11-06 21:18</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('17')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="notify_16">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="16" type="checkbox"></td>
+        <td>16</td>
+        <td>11<br>zjhongge1</td>
+        <td>1<br>管理员</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=11" class="fn" target="_blank">zjhongge1</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-10-26 15:06</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('16')">删除</a></td>
+      </tr><tr overstyle="on" id="notify_15">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="15" type="checkbox"></td>
+        <td>15</td>
+        <td>1<br>管理员</td>
+        <td>11<br>zjhongge1</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=1" class="fn" target="_blank">管理员</a><img class="ts_icon" src="index_data/v_05.gif" title="管理员"> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-10-26 15:06</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('15')">删除</a></td>
+      </tr><tr overstyle="on" id="notify_14">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="14" type="checkbox"></td>
+        <td>14</td>
+        <td>9<br>Kimi</td>
+        <td>1<br>管理员</td>
+        <td>weibo_follow</td>
+        <td><a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Space&amp;act=index&amp;uid=9" class="fn" target="_blank">Kimi</a> 关注了你</td>
+        <td>&nbsp;</td>
+        <td>2011-10-26 14:32</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('14')">删除</a></td>
+      </tr>  </tbody></table>
+  </div>
+  <div class="Toolbar_inbox">
+    <div class="page right">共33条记录&nbsp;&nbsp;&nbsp;<span class="disabled&quot;">上一页 </span> <span class="current">1</span><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=notify&amp;p=2">2</a><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=notify&amp;p=2">下一页</a></div>
+    <a href="javascript:void(0);" class="btn_a" onClick="searchNotify();">
+        <span class="search_action">搜索通知</span>
+    </a>
+    <a href="javascript:void(0);" class="btn_a" onClick="deleteRecord();"><span>删除记录</span></a>
+  </div>
+</div>
+
+<script>
+    //鼠标移动表格效果
+    $(document).ready(function(){
+        $("tr[overstyle='on']").hover(
+          function () {
+            $(this).addClass("bg_hover");
+          },
+          function () {
+            $(this).removeClass("bg_hover");
+          }
+        );
+    });
+    
+    function checkon(o){
+        if( o.checked == true ){
+            $(o).parents('tr').addClass('bg_on') ;
+        }else{
+            $(o).parents('tr').removeClass('bg_on') ;
+        }
+    }
+    
+    function checkAll(o){
+        if( o.checked == true ){
+            $('input[name="checkbox"]').attr('checked','true');
+            $('tr[overstyle="on"]').addClass("bg_on");
+        }else{
+            $('input[name="checkbox"]').removeAttr('checked');
+            $('tr[overstyle="on"]').removeClass("bg_on");
+        }
+    }
+
+    //获取已选择用户的ID数组
+    function getChecked() {
+        var ids = new Array();
+        $.each($('table input:checked'), function(i, n){
+            ids.push( $(n).val() );
+        });
+        return ids;
+    }
+    
+    function deleteRecord(ids) {
+        var length = 0;
+    	if(ids) {
+    		length = 1;    		
+    	}else {
+    		ids    = getChecked();
+    		length = ids.length;
+            ids    = ids.toString();
+    	}
+    	
+    	if(ids=='') {
+    		ui.error('请先选择一个通知');
+    		return ;
+    	}
+    	if(confirm('您将删除'+length+'条记录，删除后无法恢复，确定继续？')) {
+    		$.post("http://211.155.227.148:6688/index.php?app=admin&mod=Content&act=doDeleteNotify",{ids:ids},function(res){
+    			if(res=='1') {
+    				ui.success('删除成功');
+    				removeItem(ids);
+    			}else {
+    				ui.error('删除失败');
+    			}
+    		});
+    	}
+    }
+    
+    function removeItem(ids) {
+    	ids = ids.split(',');
+        for(i = 0; i < ids.length; i++) {
+            $('#notify_'+ids[i]).remove();
+        }
+    }
+    
+    //搜索用户
+    var isSearchHidden = 1;
+    function searchNotify() {
+        if(isSearchHidden == 1) {
+            $("#search_div").slideDown("fast");
+            $(".search_action").html("搜索完毕");
+            isSearchHidden = 0;
+        }else {
+            $("#search_div").slideUp("fast");
+            $(".search_action").html("搜索通知");
+            isSearchHidden = 1;
+        }
+    }
+</script>
+
+
+</body></html>

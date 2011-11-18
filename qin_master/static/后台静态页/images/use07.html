@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body>
+<div class="so_main">
+  <div class="page_tit">消息群发</div>
+  
+  <form method="post" action="http://211.155.227.148:6688/index.php?app=admin&amp;mod=User&amp;act=doSendMessage">
+  <div class="form2">
+    <dl class="lineD">
+      <dt>收件人：</dt>
+      <dd>
+        <select name="user_group_id">
+            <option selected="selected" value="0">全部用户</option>
+            <option value="1">管理员</option><option value="2">商家用户</option><option value="3">小区物业</option><option value="4">亲邻会员</option>        </select>
+      </dd>
+    </dl>
+    <dl class="lineD">
+      <dt>发送方式：</dt>
+      <dd>
+        <label><input name="type" value="0" checked="checked" type="radio">站内信</label><br>
+        <label><input name="type" value="1" type="radio">Email</label>
+      </dd>
+    </dl>
+    <dl class="lineD">
+      <dt>标题：</dt>
+      <dd>
+        <input name="title" type="text">
+      </dd>
+    </dl>
+    <dl class="">
+      <dt>正文：</dt>
+      <dd>
+      <textarea name="content" id="content" cols="50" rows="10"></textarea>
+      </dd>
+    </dl>
+    <div class="page_btm">
+      <input class="btn_b" value="确定" type="submit">
+    </div>
+  </div>
+  <input name="__hash__" value="d64e74726098b7c07de2f936ef1dd2e8" type="hidden"></form>
+</div>
+
+</body></html>

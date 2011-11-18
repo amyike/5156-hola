@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body>
+<script>
+function fold(index) {
+  	$('#app_'+index).slideToggle('fast');
+}
+</script>
+<div id="container" class="so_main">
+    
+    <div class="form2">
+        <h4>提示：点击标题可以折叠栏目</h4>
+                            <h3 onClick="fold('0');"> 服务器信息</h3>
+            <div id="app_0">
+            <dl><dt><strong>服务器系统及PHP版本：</strong></dt><dd>WINNT / PHP v5.2.5</dd></dl><dl><dt><strong>服务器软件：</strong></dt><dd>Microsoft-IIS/6.0</dd></dl><dl><dt><strong>最大上传许可：</strong></dt><dd>2M</dd></dl><dl><dt><strong>MySQL版本：</strong></dt><dd>5.0.45-community-nt</dd></dl><dl><dt><strong>数据库大小：</strong></dt><dd>629.01 KB</dd></dl>            </div>            <h3 onClick="fold('1');"> 用户信息</h3>
+            <div id="app_1">
+            <dl><dt><strong>当前在线：</strong></dt><dd>1</dd></dl><dl><dt><strong>全部用户：</strong></dt><dd>17</dd></dl><dl><dt><strong>有效用户：</strong></dt><dd>11</dd></dl>            </div>    </div>
+</div>
+
+</body></html>

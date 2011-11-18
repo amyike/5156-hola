@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body>
+<div class="so_main">
+  <!-------- 权限列表 -------->
+  <div class="page_tit">权限列表</div>
+  <div class="Toolbar_inbox">
+  	<div class="page right"></div>
+	<a href="javascript:void(0);" class="btn_a" onClick="setPopedom();"><span>设置权限</span></a>
+  </div>
+  
+  <div class="list">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <th style="width: 30px;">
+		<input id="checkbox_handle" onClick="checkAll(this)" value="0" type="checkbox">
+    	<label for="checkbox"></label>
+	</th>
+    <th class="line_l">节点名</th>
+    <th class="line_l">节点别名</th>
+    <th class="line_l">用户组</th>
+    <th class="line_l">操作</th>
+  </tr>
+  <tr class="" overstyle="on" id="user_1">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1" type="checkbox"></td>
+	    <td>admin / * / *</td>
+		<td>管理后台 / 全部 / 全部</td>
+	    <td>
+	    	管理员<br>	    </td>
+	    <td>
+			<a href="javascript:void(0)" onClick="setPopedom(1)">设置权限</a> 
+		</td>
+	  </tr>  </tbody></table>
+
+  </div>
+  <div class="list_btm">选择：<a href="javascript:void(0)">全部</a> - <a href="#">反选</a> - <a href="#">不选</a></div>
+  <div class="Toolbar_inbox">
+	<div class="page right"></div>
+	<a href="javascript:void(0);" class="btn_a" onClick="setPopedom();"><span>设置权限</span></a>
+  </div>
+</div>
+
+<script>
+	//鼠标移动表格效果
+	$(document).ready(function(){
+		$("tr[overstyle='on']").hover(
+		  function () {
+		    $(this).addClass("bg_hover");
+		  },
+		  function () {
+		    $(this).removeClass("bg_hover");
+		  }
+		);
+	});
+	
+	function checkon(o){
+		if( o.checked == true ){
+			$(o).parents('tr').addClass('bg_on') ;
+		}else{
+			$(o).parents('tr').removeClass('bg_on') ;
+		}
+	}
+	
+	function checkAll(o){
+		if( o.checked == true ){
+			$('input[name="checkbox"]').attr('checked','true');
+			$('tr[overstyle="on"]').addClass("bg_on");
+		}else{
+			$('input[name="checkbox"]').removeAttr('checked');
+			$('tr[overstyle="on"]').removeClass("bg_on");
+		}
+	}
+
+	//获取已选择的ID数组
+	function getChecked() {
+		var ids = new Array();
+		$.each($('table input:checked'), function(i, n){
+			ids.push( $(n).val() );
+		});
+		return ids;
+	}
+
+	//删除节点
+	function setPopedom(ids) {
+		ids = ids ? ids : getChecked();
+		ids = ids.toString();
+		if(ids == '') {
+			ui.error('请先选择节点');
+			return false;
+		}
+		if(!confirm('设置成功后将无法恢复，确认继续？')) return false;
+		
+		ui.box.load("http://211.155.227.148:6688/index.php?app=admin&mod=User&act=setPopedom&nids="+ids, {title:'设置权限'});
+	}
+	
+	//搜索用户
+	var isSearchHidden = 1;
+	function searchUser() {
+		if(isSearchHidden == 1) {
+			$("#searchUser_div").slideDown("fast");
+			$(".searchUser_action").html("搜索完毕");
+			isSearchHidden = 0;
+		}else {
+			$("#searchUser_div").slideUp("fast");
+			$(".searchUser_action").html("搜索用户");
+			isSearchHidden = 1;
+		}
+	}
+</script>
+
+
+</body></html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body>
+<div class="so_main">
+  <div class="page_tit">地区管理</div>
+  <div class="Toolbar_inbox">
+        <a href="javascript:void(0);" class="btn_a" onClick="add();"><span>添加地区</span></a>
+    <a href="javascript:void(0);" class="btn_a" onClick="del();"><span>删除地区</span></a>
+  </div>
+  
+  <div class="list">
+  <table id="area_list" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <th style="width: 30px;">
+        <input id="checkbox_handle" onClick="checkAll(this)" value="0" type="checkbox">
+        <label for="checkbox"></label>
+    </th>
+    <th class="line_l">ID</th>
+    <th class="line_l">地区名称</th>
+    <th class="line_l">操作</th>
+  </tr>
+  <tr class="" overstyle="on" id="area_1">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1" type="checkbox"></td>
+        <td>1</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=1" id="area_title_1">北京</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(1);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(1);">删除</a>  
+        </td>
+      </tr><tr class="" overstyle="on" id="area_21">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="21" type="checkbox"></td>
+        <td>21</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=21" id="area_title_21">天津</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(21);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(21);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_41">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="41" type="checkbox"></td>
+        <td>41</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=41" id="area_title_41">河北</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(41);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(41);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_225">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="225" type="checkbox"></td>
+        <td>225</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=225" id="area_title_225">山西</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(225);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(225);">删除</a>  
+        </td>
+      </tr><tr class="" overstyle="on" id="area_356">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="356" type="checkbox"></td>
+        <td>356</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=356" id="area_title_356">内蒙古</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(356);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(356);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_471">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="471" type="checkbox"></td>
+        <td>471</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=471" id="area_title_471">辽宁</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(471);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(471);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_586">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="586" type="checkbox"></td>
+        <td>586</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=586" id="area_title_586">吉林</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(586);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(586);">删除</a>  
+        </td>
+      </tr><tr class="" overstyle="on" id="area_656">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="656" type="checkbox"></td>
+        <td>656</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=656" id="area_title_656">黑龙江</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(656);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(656);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_802">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="802" type="checkbox"></td>
+        <td>802</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=802" id="area_title_802">上海</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(802);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(802);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_823">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="823" type="checkbox"></td>
+        <td>823</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=823" id="area_title_823">江苏</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(823);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(823);">删除</a>  
+        </td>
+      </tr><tr class="" overstyle="on" id="area_943">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="943" type="checkbox"></td>
+        <td>943</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=943" id="area_title_943">浙江</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(943);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(943);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_1045">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1045" type="checkbox"></td>
+        <td>1045</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=1045" id="area_title_1045">安徽</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(1045);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(1045);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_1168">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1168" type="checkbox"></td>
+        <td>1168</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=1168" id="area_title_1168">福建</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(1168);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(1168);">删除</a>  
+        </td>
+      </tr><tr class="" overstyle="on" id="area_1263">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1263" type="checkbox"></td>
+        <td>1263</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=1263" id="area_title_1263">江西</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(1263);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(1263);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_1374">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1374" type="checkbox"></td>
+        <td>1374</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=1374" id="area_title_1374">山东</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(1374);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(1374);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_1532">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1532" type="checkbox"></td>
+        <td>1532</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=1532" id="area_title_1532">河南</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(1532);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(1532);">删除</a>  
+        </td>
+      </tr><tr class="" overstyle="on" id="area_1709">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1709" type="checkbox"></td>
+        <td>1709</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=1709" id="area_title_1709">湖北</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(1709);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(1709);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_1826">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1826" type="checkbox"></td>
+        <td>1826</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=1826" id="area_title_1826">湖南</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(1826);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(1826);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_1963">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1963" type="checkbox"></td>
+        <td>1963</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=1963" id="area_title_1963">广东</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(1963);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(1963);">删除</a>  
+        </td>
+      </tr><tr class="" overstyle="on" id="area_2106">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="2106" type="checkbox"></td>
+        <td>2106</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=2106" id="area_title_2106">广西</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(2106);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(2106);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_2230">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="2230" type="checkbox"></td>
+        <td>2230</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=2230" id="area_title_2230">海南</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(2230);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(2230);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_2257">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="2257" type="checkbox"></td>
+        <td>2257</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=2257" id="area_title_2257">重庆市</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(2257);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(2257);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_2299">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="2299" type="checkbox"></td>
+        <td>2299</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=2299" id="area_title_2299">四川</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(2299);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(2299);">删除</a>  
+        </td>
+      </tr><tr class="" overstyle="on" id="area_2502">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="2502" type="checkbox"></td>
+        <td>2502</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=2502" id="area_title_2502">贵州</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(2502);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(2502);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_2600">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="2600" type="checkbox"></td>
+        <td>2600</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=2600" id="area_title_2600">云南</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(2600);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(2600);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_2746">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="2746" type="checkbox"></td>
+        <td>2746</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=2746" id="area_title_2746">西藏</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(2746);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(2746);">删除</a>  
+        </td>
+      </tr><tr class="" overstyle="on" id="area_2827">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="2827" type="checkbox"></td>
+        <td>2827</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=2827" id="area_title_2827">陕西</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(2827);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(2827);">删除</a>  
+        </td>
+      </tr><tr class="" overstyle="on" id="area_2945">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="2945" type="checkbox"></td>
+        <td>2945</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=2945" id="area_title_2945">甘肃</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(2945);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(2945);">删除</a>  
+        </td>
+      </tr><tr class="" overstyle="on" id="area_3046">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="3046" type="checkbox"></td>
+        <td>3046</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=3046" id="area_title_3046">青海</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(3046);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(3046);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_3098">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="3098" type="checkbox"></td>
+        <td>3098</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=3098" id="area_title_3098">宁夏</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(3098);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(3098);">删除</a>  
+        </td>
+      </tr><tr overstyle="on" id="area_3125">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="3125" type="checkbox"></td>
+        <td>3125</td>
+        <td><div style="float:left"><a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Tool&amp;act=area&amp;pid=3125" id="area_title_3125">新疆</a></div></td>
+        <td>
+            <a href="javascript:void(0);" onClick="edit(3125);">编辑</a> 
+            <a href="javascript:void(0);" onClick="del(3125);">删除</a>  
+        </td>
+      </tr>  </tbody></table>
+
+  </div>
+  <div class="Toolbar_inbox">
+        <a href="javascript:void(0);" class="btn_a" onClick="add();"><span>添加地区</span></a>
+    <a href="javascript:void(0);" class="btn_a" onClick="del();"><span>删除地区</span></a>
+  </div>
+</div>
+
+<script>
+    //鼠标移动表格效果
+    $(document).ready(function(){
+        $("tr[overstyle='on']").hover(
+          function () {
+            $(this).addClass("bg_hover");
+          },
+          function () {
+            $(this).removeClass("bg_hover");
+          }
+        );
+    });
+    
+    function checkon(o){
+        if( o.checked == true ){
+            $(o).parents('tr').addClass('bg_on') ;
+        }else{
+            $(o).parents('tr').removeClass('bg_on') ;
+        }
+    }
+    
+    function checkAll(o){
+        if( o.checked == true ){
+            $('input[name="checkbox"]').attr('checked','true');
+            $('tr[overstyle="on"]').addClass("bg_on");
+        }else{
+            $('input[name="checkbox"]').removeAttr('checked');
+            $('tr[overstyle="on"]').removeClass("bg_on");
+        }
+    }
+
+    //获取已选择用户的ID数组
+    function getChecked() {
+        var gids = new Array();
+        $.each($('input:checked'), function(i, n){
+            gids.push( $(n).val() );
+        });
+        return gids;
+    }
+
+    //添加地区
+    function add() {
+        ui.box.load("http://211.155.227.148:6688/index.php?app=admin&mod=Tool&act=addArea&pid=0", {title:'添加地区'});
+    }
+    
+    //编辑地区
+    function edit(area_id) {
+        ui.box.load("http://211.155.227.148:6688/index.php?app=admin&mod=Tool&act=editArea&area_id="+area_id, {title:'编辑地区'});
+    }
+    
+    //删除地区
+    function del(aid) {
+        aid = aid ? aid : getChecked();
+        aid = aid.toString();
+        if(aid == '') return false;
+
+        //提交删除
+        $.post("http://211.155.227.148:6688/index.php?app=admin&mod=Tool&act=doDeleteArea", {ids:aid}, function(res){
+	        if(res == '1') {
+		        aid = aid.split(',');
+		        $.each(aid, function(i,n){
+		            $('#area_'+n).remove();
+		        });
+	            ui.success('删除成功');
+	        }else {
+	        	ui.success('删除失败');
+	        }
+        });
+        
+        
+    }
+</script>
+
+
+</body></html>
