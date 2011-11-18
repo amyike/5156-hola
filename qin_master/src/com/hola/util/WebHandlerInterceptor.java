@@ -9,8 +9,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.hola.pojo.UserPojo;
 
 /**
- * @author: dxl
- * @createDate: 2011-08-02
+ * @author: 
+ * @createDate: 
  * @function: 自定义拦截器，可实现权限判断、数据验证等功能
  */
 public class WebHandlerInterceptor implements HandlerInterceptor {
