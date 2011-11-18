@@ -4,9 +4,11 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 	<display-name>qin_master</display-name>
+	
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	<!-- 防止内存泄露 --> 
 	<listener>
 		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
 	</listener>
@@ -26,6 +28,8 @@
 		<filter-name>set-character-encoding</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -33,17 +37,10 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>
-		<url-pattern>*.form</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>portlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>portlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+	<!-- RESTful URL 浏览器不支持put,delete等method,由该filter将/blog?_method=delete转换为标准的http delete方法 -->
 	<filter>
 		<filter-name>hiddenHttpMethodFilter</filter-name>
 		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
@@ -52,12 +49,8 @@
 		<filter-name>hiddenHttpMethodFilter</filter-name>
 		<servlet-name>dispatcher</servlet-name>
 	</filter-mapping>
-	<session-config>
-		<session-timeout>60</session-timeout>
-	</session-config>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
+	
+	<!-- freemarker settings -->
 	<servlet>
 		<servlet-name>freemarker</servlet-name>
 		<servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>
@@ -95,6 +88,12 @@
 		<servlet-name>freemarker</servlet-name>
 		<url-pattern>*.ftl</url-pattern>
 	</servlet-mapping>
+	<!--/ freemarker settings -->
+	
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
