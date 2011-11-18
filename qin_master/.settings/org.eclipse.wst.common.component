@@ -4,6 +4,6 @@
         <wb-resource deploy-path="/" source-path="/WebRoot"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <property name="java-output-path" value="/my/WebRoot/WEB-INF/classes"/>
-        <property name="context-root" value="ec"/>
+        <property name="context-root" value="qin_master"/>
     </wb-module>
 </project-modules>
