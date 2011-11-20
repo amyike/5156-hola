@@ -4,11 +4,16 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 	<display-name>qin_master</display-name>
-	
+	<!-- Spring 容器启动监听器, 加载Spring容器配置 -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-	<!-- 防止内存泄露 --> 
+
+	<!-- 设置Spring容器加载配置文件路径 -->
+	<!-- <context-param> <param-name>contextConfigLocation</param-name> <param-value>classpath*:applicationContext-*.xml</param-value> 
+		</context-param> -->
+
+	<!-- 防止内存泄露 -->
 	<listener>
 		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
 	</listener>
@@ -28,8 +33,8 @@
 		<filter-name>set-character-encoding</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
-	
+
+
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -39,7 +44,7 @@
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- RESTful URL 浏览器不支持put,delete等method,由该filter将/blog?_method=delete转换为标准的http delete方法 -->
 	<filter>
 		<filter-name>hiddenHttpMethodFilter</filter-name>
@@ -49,7 +54,7 @@
 		<filter-name>hiddenHttpMethodFilter</filter-name>
 		<servlet-name>dispatcher</servlet-name>
 	</filter-mapping>
-	
+
 	<!-- freemarker settings -->
 	<servlet>
 		<servlet-name>freemarker</servlet-name>
@@ -89,7 +94,7 @@
 		<url-pattern>*.ftl</url-pattern>
 	</servlet-mapping>
 	<!--/ freemarker settings -->
-	
+
 	<session-config>
 		<session-timeout>60</session-timeout>
 	</session-config>
