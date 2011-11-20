@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body>
+<div class="so_main">
+  <div class="page_tit">审核配置 - 全站内容敏感词过滤</div>
+  
+  <form method="post" action="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Global&amp;act=doSaveAudit">
+  <div class="form2">
+    <dl class="lineD">
+      <dt>是否开启关键字过滤：</dt>
+      <dd>
+        <label><input name="open" value="1" type="radio">是</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label><input name="open" value="0" checked="checked" type="radio">否</label>
+      </dd>
+    </dl>
+    <dl class="lineD">
+      <dt>敏感词：</dt>
+      <dd>
+      <textarea name="keywords" cols="50" rows="10"></textarea>
+      <br>(提示：多个敏感词用|号分开)
+      </dd>
+    </dl>
+    <dl class="">
+      <dt>敏感词替换为：</dt>
+      <dd>
+      <input name="replace" type="Text">
+      </dd>
+    </dl>
+    <div class="page_btm">
+      <input class="btn_b" value="确定" type="submit">
+    </div>
+  </div>
+  <input name="__hash__" value="0af4791d9db10edba25a8c3039083eac" type="hidden"></form>
+</div>
+
+</body></html>

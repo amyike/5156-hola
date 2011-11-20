@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body>
+<div class="so_main">
+  <!-------- 表情列表 -------->
+  <div class="page_tit">表情管理</div>
+  <div class="Toolbar_inbox">
+  	<div class="page right"></div>
+	<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=addExpression" class="btn_a"><span>添加表情</span></a>
+	<a href="javascript:void(0);" class="btn_a" onClick="deleteExpression();"><span>删除表情</span></a>
+	
+  </div>
+  
+  <div class="list">
+  	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <th style="width: 30px;">
+		<input id="checkbox_handle" onClick="checkAll(this)" value="0" type="checkbox">
+    	<label for="checkbox"></label>
+	</th>
+    <th class="line_l">ID</th>
+    <th class="line_l">名称</th>
+    <th class="line_l">类型</th>
+    <th class="line_l">缩写</th>
+    <th class="line_l">文件名</th>
+	<th class="line_l">预览</th>
+    <th class="line_l">操作</th>
+  </tr>
+  <tr overstyle="on" id="tpl_1">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1" type="checkbox"></td>
+	    <td>1</td>
+	    <td>拥抱</td>
+		<td>miniblog</td>
+	    <td>[拥抱]&nbsp;</td>
+	    <td>hug.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/hug.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=1">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(1);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_2">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="2" type="checkbox"></td>
+	    <td>2</td>
+	    <td>示爱</td>
+		<td>miniblog</td>
+	    <td>[示爱]&nbsp;</td>
+	    <td>kiss.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/kiss.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=2">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(2);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_3">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="3" type="checkbox"></td>
+	    <td>3</td>
+	    <td>呲牙</td>
+		<td>miniblog</td>
+	    <td>[呲牙]&nbsp;</td>
+	    <td>lol.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/lol.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=3">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(3);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_4">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="4" type="checkbox"></td>
+	    <td>4</td>
+	    <td>可爱</td>
+		<td>miniblog</td>
+	    <td>[可爱]&nbsp;</td>
+	    <td>loveliness.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/loveliness.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=4">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(4);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_5">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="5" type="checkbox"></td>
+	    <td>5</td>
+	    <td>折磨</td>
+		<td>miniblog</td>
+	    <td>[折磨]&nbsp;</td>
+	    <td>mad.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/mad.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=5">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(5);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_6">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="6" type="checkbox"></td>
+	    <td>6</td>
+	    <td>难过</td>
+		<td>miniblog</td>
+	    <td>[难过]&nbsp;</td>
+	    <td>sad.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/sad.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=6">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(6);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_7">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="7" type="checkbox"></td>
+	    <td>7</td>
+	    <td>流汗</td>
+		<td>miniblog</td>
+	    <td>[流汗]&nbsp;</td>
+	    <td>sweat.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/sweat.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=7">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(7);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_8">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="8" type="checkbox"></td>
+	    <td>8</td>
+	    <td>憨笑</td>
+		<td>miniblog</td>
+	    <td>[憨笑]&nbsp;</td>
+	    <td>biggrin.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/biggrin.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=8">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(8);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_9">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="9" type="checkbox"></td>
+	    <td>9</td>
+	    <td>大哭</td>
+		<td>miniblog</td>
+	    <td>[大哭]&nbsp;</td>
+	    <td>cry.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/cry.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=9">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(9);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_10">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="10" type="checkbox"></td>
+	    <td>10</td>
+	    <td>惊恐</td>
+		<td>miniblog</td>
+	    <td>[惊恐]&nbsp;</td>
+	    <td>funk.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/funk.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=10">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(10);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_11">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="11" type="checkbox"></td>
+	    <td>11</td>
+	    <td>握手</td>
+		<td>miniblog</td>
+	    <td>[握手]&nbsp;</td>
+	    <td>handshake.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/handshake.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=11">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(11);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_12">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="12" type="checkbox"></td>
+	    <td>12</td>
+	    <td>发怒</td>
+		<td>miniblog</td>
+	    <td>[发怒]&nbsp;</td>
+	    <td>huffy.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/huffy.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=12">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(12);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_13">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="13" type="checkbox"></td>
+	    <td>13</td>
+	    <td>惊讶</td>
+		<td>miniblog</td>
+	    <td>[惊讶]&nbsp;</td>
+	    <td>shocked.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/shocked.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=13">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(13);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_14">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="14" type="checkbox"></td>
+	    <td>14</td>
+	    <td>害羞</td>
+		<td>miniblog</td>
+	    <td>[害羞]&nbsp;</td>
+	    <td>shy.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/shy.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=14">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(14);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_15">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="15" type="checkbox"></td>
+	    <td>15</td>
+	    <td>微笑</td>
+		<td>miniblog</td>
+	    <td>[微笑]&nbsp;</td>
+	    <td>smile.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/smile.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=15">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(15);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_16">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="16" type="checkbox"></td>
+	    <td>16</td>
+	    <td>偷笑</td>
+		<td>miniblog</td>
+	    <td>[偷笑]&nbsp;</td>
+	    <td>titter.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/titter.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=16">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(16);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_17">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="17" type="checkbox"></td>
+	    <td>17</td>
+	    <td>调皮</td>
+		<td>miniblog</td>
+	    <td>[调皮]&nbsp;</td>
+	    <td>tongue.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/tongue.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=17">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(17);">删除</a>
+		</td>
+	  </tr><tr overstyle="on" id="tpl_18">
+	    <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="18" type="checkbox"></td>
+	    <td>18</td>
+	    <td>胜利</td>
+		<td>miniblog</td>
+	    <td>[胜利]&nbsp;</td>
+	    <td>victory.gif</td>
+		<td>
+			<div style="float:left;margin-right:10px;border:1px solid #8098A8;padding:1px;" "="">
+				<img src="index_data/victory.gif">
+			</div>
+		</td>
+	    <td>
+			<a href="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=editExpression&amp;expression_id=18">编辑</a> 
+	    	<a href="javascript:void(0);" onClick="deleteExpression(18);">删除</a>
+		</td>
+	  </tr>  
+    </tbody></table>
+
+  </div>
+  <div class="list_btm">选择：<a href="javascript:void(0)">全部</a> - <a href="#">反选</a> - <a href="#">不选</a></div>
+  <div class="Toolbar_inbox">
+	<div class="page right"></div>
+	<a href="javascript:void(0);" class="btn_a" onClick="window.open('http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=addExpression','_self');"><span>添加表情</span></a>
+	<a href="javascript:void(0);" class="btn_a" onClick="deleteExpression();"><span>删除表情</span></a>
+	
+  </div>
+</div>
+
+<script>
+	//鼠标移动表格效果
+	$(document).ready(function(){
+		$("tr[overstyle='on']").hover(
+		  function () {
+		    $(this).addClass("bg_hover");
+		  },
+		  function () {
+		    $(this).removeClass("bg_hover");
+		  }
+		);
+	});
+	
+	function checkon(o){
+		if( o.checked == true ){
+			$(o).parents('tr').addClass('bg_on') ;
+		}else{
+			$(o).parents('tr').removeClass('bg_on') ;
+		}
+	}
+	
+	function checkAll(o){
+		if( o.checked == true ){
+			$('input[name="checkbox"]').attr('checked','true');
+			$('tr[overstyle="on"]').addClass("bg_on");
+		}else{
+			$('input[name="checkbox"]').removeAttr('checked');
+			$('tr[overstyle="on"]').removeClass("bg_on");
+		}
+	}
+
+	//获取已选择用户的ID数组
+	function getChecked() {
+		var ids = new Array();
+		$.each($('table input:checked'), function(i, n){
+			ids.push( $(n).val() );
+		});
+		return ids;
+	}
+	
+	//删除用户
+	function deleteExpression(expression_ids) {
+		expression_ids = expression_ids ? expression_ids : getChecked();
+		expression_ids = expression_ids.toString();
+		if(expression_ids == '' || !confirm('删除成功后将无法恢复，确认继续？')) return false;
+		$.post("http://211.155.227.148:6688/index.php?app=admin&mod=Content&act=doDeleteExpression", {expression_id:expression_ids}, function(res){
+			if(res == '1') {
+				expression_ids = expression_ids.split(',');
+				for(i = 0; i < expression_ids.length; i++) {
+					$('#tpl_'+expression_ids[i]).remove();
+				}
+				ui.success('删除成功～');
+			}else {
+				ui.success('删除失败～');
+			}
+		});
+	}
+	
+	//添加模板
+	var isSearchHidden = 1;
+	function searchUser() {
+		if(isSearchHidden == 1) {
+			$("#searchUser_div").slideDown("fast");
+			$(".searchUser_action").html("隐藏搜索");
+			isSearchHidden = 0;
+		}else {
+			$("#searchUser_div").slideUp("fast");
+			$(".searchUser_action").html("搜索用户");
+			isSearchHidden = 1;
+		}
+	}
+</script>
+
+
+</body></html>
