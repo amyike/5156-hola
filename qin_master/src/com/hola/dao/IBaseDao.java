@@ -3,7 +3,7 @@ package com.hola.dao;
 import java.io.Serializable;
 import java.util.List;
 
-import com.hola.Exception.BizException;
+import com.hola.exception.BizException;
 
 /**
  * 
