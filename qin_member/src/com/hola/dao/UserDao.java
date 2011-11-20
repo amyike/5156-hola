@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.hibernate.Criteria;
 
-import com.hola.Exception.BizException;
+import com.hola.exception.BizException;
 import com.hola.pojo.UserPojo;
 
 public class UserDao extends BaseDao<UserPojo> {

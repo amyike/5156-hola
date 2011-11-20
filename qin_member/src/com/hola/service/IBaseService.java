@@ -3,7 +3,7 @@ package com.hola.service;
 import java.io.Serializable;
 import java.util.List;
 
-import com.hola.Exception.BizException;
+import com.hola.exception.BizException;
 
 /**
  * 

@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.hola.Exception.BizException;
 import com.hola.dao.UserDao;
+import com.hola.exception.BizException;
 import com.hola.pojo.UserPojo;
 
 public class UserService extends BaseService<UserPojo> {
