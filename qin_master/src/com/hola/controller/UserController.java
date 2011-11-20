@@ -1,26 +1,18 @@
 package com.hola.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.hola.service.UserService;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("user")
-public class UserController extends BaseController {
-
-	private UserService userService;
-
-	@RequestMapping(value = "/{id}")
-	public void index() {
-		try {
-			// userService.find(new Integer(0));
-			// userService.delete(new Long(0));
-			// userService.update(new UserPojo());
-			// userService.create(new UserPojo());
-			System.out.println("hello world !!!");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+@RequestMapping("/user")
+public class UserController {
+	@RequestMapping("/list")
+	public ModelAndView list(Model model) {
+		// model.addAttribute("user", "kaliry");
+		System.out.println("hello:" + model);
+		// return "redirect:/success.jsp";
+		return new ModelAndView("welcome");
 	}
 }
