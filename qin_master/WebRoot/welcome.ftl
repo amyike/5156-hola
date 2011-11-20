@@ -5,6 +5,7 @@
   </head>
   
   <body>
+  user:
  	 <#assign a = 0>
  	 <#if a lt 2>
  	 haha
