@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.hola.exception.BizException;
 import com.hola.service.CommunityService;
 
 @Controller
@@ -17,7 +18,12 @@ public class CommunityController extends BaseController {
 
 	@RequestMapping("/")
 	public ModelAndView index(Model model) {
-		System.out.println(communityService);
-		return new ModelAndView("community");
+		try {
+			int count = communityService.count();
+			model.addAttribute("count", count);
+		} catch (BizException e) {
+			e.printStackTrace();
+		}
+		return new ModelAndView("community/index");
 	}
 }

@@ -11,7 +11,7 @@ import com.hola.exception.BizException;
 import com.hola.pojo.TsXqtable;
 
 @Service
-public class CommunityService implements IBaseService<TsXqtable> {
+public class CommunityService extends BaseService<TsXqtable> {
 
 	@Autowired
 	private CommunityDao communityDao;
@@ -31,8 +31,7 @@ public class CommunityService implements IBaseService<TsXqtable> {
 
 	@Override
 	public int count() throws BizException {
-		// TODO Auto-generated method stub
-		return 0;
+		return communityDao.count();
 	}
 
 	@Override

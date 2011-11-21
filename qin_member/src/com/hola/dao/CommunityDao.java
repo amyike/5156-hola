@@ -4,15 +4,13 @@ import java.io.Serializable;
 import java.util.List;
 
 import org.hibernate.Criteria;
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 
 import com.hola.exception.BizException;
 import com.hola.pojo.TsXqtable;
 
 @Repository
-public class CommunityDao extends HibernateDaoSupport implements
-		IBaseDao<TsXqtable> {
+public class CommunityDao extends BaseDao<TsXqtable> {
 
 	@Override
 	public List<TsXqtable> find(final int pageIndex, final int pageSize) {
@@ -23,14 +21,15 @@ public class CommunityDao extends HibernateDaoSupport implements
 	}
 
 	@Override
-	public int count() {
-		String hql = "select count(*) from UserInfo as user";
-		return (Integer) getHibernateTemplate().find(hql).listIterator().next();
+	public void create(final TsXqtable user) {
+		getHibernateTemplate().save(user);
 	}
 
 	@Override
-	public void create(final TsXqtable user) {
-		getHibernateTemplate().save(user);
+	public int count() {
+		String hql = "select count(*) from TsXqtable";
+		return ((Long) getHibernateTemplate().find(hql).listIterator().next())
+				.intValue();
 	}
 
 	@Override

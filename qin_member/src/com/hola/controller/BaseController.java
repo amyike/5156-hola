@@ -3,7 +3,7 @@ package com.hola.controller;
 import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
 
-public abstract class BaseController {
+public abstract class BaseController implements IBaseController {
 
 	public ModelAndView index(Model model, String name) {
 
