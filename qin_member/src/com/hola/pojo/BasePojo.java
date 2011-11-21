@@ -1,5 +1,5 @@
 package com.hola.pojo;
 
-public abstract class BasePojo {
+public abstract class BasePojo {//
 
 }
