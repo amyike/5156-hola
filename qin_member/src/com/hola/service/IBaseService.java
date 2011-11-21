@@ -14,6 +14,7 @@ import com.hola.exception.BizException;
  * @param <T>
  */
 public interface IBaseService<T> {
+
 	/**
 	 * 根据 ID 查询
 	 * 
