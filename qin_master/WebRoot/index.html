@@ -309,8 +309,17 @@ document.onkeydown=inactiveF5;
 		    	您好,管理员&nbsp; | <a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Index&amp;act=index">返回前台</a> | <a href="javascript:void(0);" onClick="refresh();">刷新</a> | <a href="http://211.155.227.148:6688/index.php?app=home&amp;mod=Public&amp;act=logoutAdmin">退出</a><br>
 		    	<div id="TopTime"></div>
 		    </div>
-		    <div class="main_nav">
-		    	<a id="channel_index" class="on" href="javascript:void(0)" onClick="switchChannel('index');" hidefocus="true" style="outline: medium none;">首页</a><a id="channel_global" href="javascript:void(0)" onClick="switchChannel('global');" hidefocus="true" style="outline: medium none;">全局</a><a id="channel_content" href="javascript:void(0)" onClick="switchChannel('content');" hidefocus="true" style="outline: medium none;">内容</a><a id="channel_user" href="javascript:void(0)" onClick="switchChannel('user');" hidefocus="true" style="outline: medium none;">用户</a><a id="channel_xiaoqu" href="javascript:void(0)" onClick="switchChannel('xiaoqu');" hidefocus="true" style="outline: medium none;">小区</a><a id="channel_job" href="javascript:void(0)" onClick="switchChannel('job');" hidefocus="true" style="outline: medium none;">人才</a><a id="channel_city" href="javascript:void(0)" onClick="switchChannel('city');" hidefocus="true" style="outline: medium none;">同城</a><a id="channel_apps" href="javascript:void(0)" onClick="switchChannel('apps');" hidefocus="true" style="outline: medium none;">应用</a><a id="channel_extension" href="javascript:void(0)" onClick="switchChannel('extension');" hidefocus="true" style="outline: medium none;">扩展</a>			</div>                   
+		     <div class="main_nav">
+		    	<a id="channel_index" class="on" href="javascript:void(0)" onClick="switchChannel('index');" hidefocus="true" style="outline: medium none;">首页</a>
+		    	<a id="channel_global" href="javascript:void(0)" onClick="switchChannel('global');" hidefocus="true" style="outline: medium none;">全局</a>
+		    	<a id="channel_content" href="javascript:void(0)" onClick="switchChannel('content');" hidefocus="true" style="outline: medium none;">内容</a>
+		    	<a id="channel_user" href="javascript:void(0)" onClick="switchChannel('user');" hidefocus="true" style="outline: medium none;">用户</a>
+		    	<a id="channel_xiaoqu" href="javascript:void(0)" onClick="switchChannel('xiaoqu');" hidefocus="true" style="outline: medium none;">小区</a>
+		    	<a id="channel_job" href="javascript:void(0)" onClick="switchChannel('job');" hidefocus="true" style="outline: medium none;">人才</a>
+		    	<a id="channel_city" href="javascript:void(0)" onClick="switchChannel('city');" hidefocus="true" style="outline: medium none;">同城</a>
+		    	<a id="channel_apps" href="javascript:void(0)" onClick="switchChannel('apps');" hidefocus="true" style="outline: medium none;">应用</a>
+		    	<a id="channel_extension" href="javascript:void(0)" onClick="switchChannel('extension');" hidefocus="true" style="outline: medium none;">扩展</a>
+		    </div>                   
 		</div>
 		<div class="header_line"><span>&nbsp;</span></div>
 	</td>
@@ -415,18 +424,18 @@ document.onkeydown=inactiveF5;
 	      			        <li class="treemenu">
 		          <a id="root_42" class="actuator" href="javascript:void(0)" onClick="switch_root_menu('42');" hidefocus="true" style="outline: medium none;">人才</a>
 		          <ul id="tree_42" class="submenu">
-		            		          	<!-- 第三级菜单 -->
-		          	                        		            	<li><a id="menu_43" href="javascript:void(0)" onClick="switch_sub_menu('43', 'images/talent01.html');" class="submenuA" hidefocus="true" style="outline: medium none;">求职列表</a></li>
-											                        		            	<li><a id="menu_44" href="javascript:void(0)" onClick="switch_sub_menu('44', 'images/talent02.html');" class="submenuA" hidefocus="true" style="outline: medium none;">招聘列表</a></li>
-													          </ul>
+		          	<!-- 第三级菜单 -->
+		          	        <li><a id="menu_43" href="javascript:void(0)" onClick="switch_sub_menu('43', 'images/talent01.html');" class="submenuA" hidefocus="true" style="outline: medium none;">求职列表</a></li>
+					 	<li><a id="menu_44" href="javascript:void(0)" onClick="switch_sub_menu('44', 'images/talent02.html');" class="submenuA" hidefocus="true" style="outline: medium none;">招聘列表</a></li>
+				  </ul>
 		        </li>
 					        <li class="treemenu">
 		          <a id="root_45" class="actuator" href="javascript:void(0)" onClick="switch_root_menu('45');" hidefocus="true" style="outline: medium none;">权限</a>
 		          <ul id="tree_45" class="submenu">
-		            		          	<!-- 第三级菜单 -->
-		          	                        		            	<li><a id="menu_46" href="javascript:void(0)" onClick="switch_sub_menu('46', 'images/site1.html');" class="submenuA" hidefocus="true" style="outline: medium none;">节点管理</a></li>
-											                        		            	<li><a id="menu_47" href="javascript:void(0)" onClick="switch_sub_menu('47', 'images/site2.html');" class="submenuA" hidefocus="true" style="outline: medium none;">权限管理</a></li>
-													          </ul>
+		            		<!-- 第三级菜单 -->
+		          	       	<li><a id="menu_46" href="javascript:void(0)" onClick="switch_sub_menu('46', 'images/site1.html');" class="submenuA" hidefocus="true" style="outline: medium none;">节点管理</a></li>
+							<li><a id="menu_47" href="javascript:void(0)" onClick="switch_sub_menu('47', 'images/site2.html');" class="submenuA" hidefocus="true" style="outline: medium none;">权限管理</a></li>
+		         </ul>
 		        </li>
 				      	</ul>
 			      	<ul class="MenuList" id="root_city" style="display:none;">
@@ -576,4 +585,5 @@ document.onkeydown=inactiveF5;
 	_attachEvent(window, 'keydown', resetEscAndF5, parent.frames[0]);
 	*/
 </script>
-</body></html>
+</body>
+</html>
