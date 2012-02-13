@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="scripts/artDialog.js?skin=default"></script>
+<script type="text/javascript" src="scripts/jquery.artDialog.js?skin=default"></script>
+<script type="text/javascript" src="scripts/artDialog.iframeTools.js"></script>
+
+<script>
+	//'<img src="./images/photo.jpg" width="379" height="500" />'
+	var content = "<iframe width='1000px' height='500px' src='../imageSelect'></iframe>";
+	function showDialog() {
+		var dialog = art.dialog({
+		 	//width: '100%',
+		    //height: '100%',
+		    //left: '0%',
+		    //top: '0%',
+		    fixed: true,
+		    resize: true,
+		    drag: true,
+		    padding: 0,//填充
+		    //background: '#600', // 背景色
+		    opacity: 0.7,	// 透明度
+		    //icon: 'error',
+		    title: '照片',
+		    content: content,
+		    lock: true
+		});
+		//alert("dialog:"+dialog);
+	}
+</script>
+
+</head>
+<body>
+	<button onclick="showDialog();">运行»</button>
+</body>
+</html>
