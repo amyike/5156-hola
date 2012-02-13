@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body>
+<div class="so_main">
+  <div class="page_tit">邮件配置</div>
+  
+  <div class="form2">
+  	<form method="post" action="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Global&amp;act=email">
+    <dl class="lineD">
+      <dt>邮件发送方式：</dt>
+      <dd>
+		<select name="email_sendtype">
+			<option value="smtp" selected="selected">smtp</option>
+			<!-- 
+			<option value="mail" >Mail</option>
+			<option value="sendmail" >SendMail</option>
+			 -->
+		</select>
+		<!-- 
+		<p>使用mail函数发送请填mail或sendmail，使用smtp发送请添smtp</p>
+		 -->
+    </dd></dl>
+ 
+    <dl class="lineD">
+      <dt>SMTP地址：</dt>
+      <dd>
+       		<input size="30" name="email_host"> 
+			<p>发送邮箱的smtp地址。如: smtp.gmail.com或smtp.qq.com</p>
+      </dd>
+	  
+    </dl>
+      <dl class="lineD">
+      <dt>是否启用SSL连接：</dt>
+      <dd>
+        <label><input name="email_ssl" value="1" type="radio">是</label>
+        <label><input name="email_ssl" value="0" checked="checked" type="radio">否</label>
+		<p>此选项需要服务器环境支持SSL（如果使用Gmail或QQ邮箱，请选择是）</p>
+    </dd></dl>
+	
+   <dl class="lineD">
+      <dt>端口：</dt>
+      <dd>
+        <input name="email_port" id="textfield" type="text">
+		<p>smtp的端口。默认为25。具体请参看各STMP服务商的设置说明 （如果使用Gmail或QQ邮箱，请将端口设为465）</p>
+    </dd></dl>
+	
+   <dl class="lineD">
+      <dt>邮箱地址：</dt>
+      <dd>
+        <input name="email_account" id="textfield" type="text">
+		<p>邮箱地址请输入完整地址email@email.com格式</p>
+    </dd></dl>
+	
+   <dl class="lineD">
+      <dt>邮箱密码：</dt>
+      <dd>
+        <input name="email_password" id="textfield" type="text">
+		<p>邮箱密码</p>
+    </dd></dl>
+	
+   <dl class="lineD">
+      <dt>发送者姓名：</dt>
+      <dd>
+        <input name="email_sender_name" id="textfield" value="admin" type="text">
+		<p>发送者姓名</p>
+    </dd></dl>
+	
+    <div class="page_btm">
+      <input class="btn_b" value="确定" type="submit">
+    </div>
+    <input name="__hash__" value="0be9b8c403a6513a3b3ec2e123edc3cf" type="hidden"></form>
+  </div>
+
+</div>
+
+</body></html>

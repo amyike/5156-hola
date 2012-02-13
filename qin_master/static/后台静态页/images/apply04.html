@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body class="ke-gecko">
+
+<!-- 编辑器样式文件 -->
+<link href="index_data/base-min.css" rel="stylesheet">
+<!--[if lt IE 8]>
+<link href="http://211.155.227.148:6688/public/js/editor/editor/theme/cool/editor-pkg-sprite-min.css" rel="stylesheet"/>
+<![endif]-->
+<!--[if gte IE 8]><!-->
+<link href="index_data/editor-pkg-min-datauri.css" rel="stylesheet">
+<!--<![endif]-->
+
+
+<!-- 引入编辑器相关的JS文件 -->
+<script src="index_data/kissy-min.js"></script>
+<script src="index_data/uibase-min.js"></script>
+<script src="index_data/dd-min.js"></script>
+<script src="index_data/component-min.js"></script>
+<script src="index_data/overlay-min.js"></script>
+<script src="index_data/editor-all-pkg-min.js"></script>
+<script src="index_data/editor-plugin-pkg-min.js"></script>
+<script>
+function loadEditor(textareaId) {
+    KISSY.use('editor', function() {
+        var KE = KISSY.Editor;
+        var EDITER_UPLOAD = "http://211.155.227.148:6688/index.php?app=home&mod=Attach&act=kissy";
+       
+        //编辑器内弹窗 z-index 底限，防止互相覆盖
+        KE.Config.baseZIndex = 10000;
+
+        var cfg = {
+            attachForm:true,
+            baseZIndex:10000,
+            focus:true,
+            pluginConfig: {
+                "image":{
+                    upload:{
+                        serverUrl:EDITER_UPLOAD,
+                        surfix:"png,jpg,jpeg,gif,bmp",
+                        sizeLimit:"2000" // K
+                    }
+                },
+                "flash":{
+                    defaultWidth:"300",
+                    defaultHeight:"300"
+                },
+                "resize":{
+                    direction:["y"]
+                }
+            }
+        };
+
+        KE("#"+textareaId, cfg).use(
+            "preview,separator," +
+            "undo,separator," +
+            "removeformat,font,format,color,table,separator," +
+            "list,indent,justify,separator," +
+            "link,image,flash,xiami-music,smiley,separator," +
+            "maximize");
+    });
+}
+
+function getEditorWordCount() {
+	var count = 0;
+	
+	return count;
+}
+</script>
+
+<div class="so_main">
+  <div id="editTpl_div">
+  	<div class="page_tit">添加首页flash轮播</div>
+	
+	<div class="form2">
+	<form method="post" action="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=doEditAd">
+	    <dl class="lineD">
+      <dt>标题：</dt>
+      <dd>
+        <input name="title" type="text"> *
+	  </dd>
+    </dl>
+	
+	
+    <dl class="lineD">
+      <dt>是否有效：</dt>
+      <dd>
+        <input name="is_active" value="0" checked="checked" type="radio">否<br>
+		<input name="is_active" value="1" type="radio">是
+	  </dd>
+    </dl>
+<!--
+	<dl class="lineD">
+      <dt>是否可关闭：</dt>
+      <dd>
+        <input type="radio" name="is_closable" value="0" checked>否<br />
+		<input type="radio" name="is_closable" value="1" >是
+	  </dd>
+    </dl>
+-->	
+    
+	
+    <div class="page_btm">
+      <input class="btn_b" value="确定" type="submit">
+    </div>
+	<input name="__hash__" value="1b514709dee9db569cff355e1e48a431" type="hidden"></form>
+  </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+	loadEditor("content");
+});
+</script>
+
+</body></html>

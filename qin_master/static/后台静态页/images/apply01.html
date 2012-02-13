@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+//鼠标移动表格效果
+$(document).ready(function(){
+    $("tr[overstyle='on']").hover(
+      function () {
+        $(this).addClass("bg_hover");
+      },
+      function () {
+        $(this).removeClass("bg_hover");
+      }
+    );
+});
+
+function setStatus(app_id, status) {    
+	$.post("http://211.155.227.148:6688/index.php?app=admin&mod=Apps&act=doSetStatus",{app_id:app_id,status:status},function(res){
+		if(res=='1') {
+			ui.success('保存成功');
+			
+			var statusArray = new Array("关闭","默认","可选");
+			$('#status_'+app_id).html(statusArray[status]);
+			statusArray[status] = '';
+			var html = '';
+			for (s in statusArray) {
+				if(statusArray[s]=='') continue;
+				html += '<a href="javascript:void(0);" onclick="setStatus('+app_id+','+s+')">设为'+statusArray[s]+'</a> ';
+			}
+			$('#setStatus_'+app_id).html(html);
+		}else {
+			ui.error('保存失败');
+		}
+	});
+}
+
+function move(app_id, direction) {
+	var baseid  = direction == 'up' ? $('#'+app_id).prev().attr('id') : $('#'+app_id).next().attr('id');
+    if(!baseid) {
+        direction == 'up' ? ui.error('已经是最前面了') : ui.error('已经是最后面了');
+    }else {
+        $.post("http://211.155.227.148:6688/index.php?app=admin&mod=Apps&act=doAppOrder", {app_id:app_id, baseid:baseid}, function(res){
+            if(res == '1') {
+                //交换位置
+                direction == 'up' ? $('#'+app_id).insertBefore('#'+baseid) : $("#"+app_id).insertAfter('#'+baseid);
+                ui.success('保存成功');
+            }else {
+                ui.error('保存失败');
+            }
+        });
+    }
+}
+</script>
+<div class="so_main">
+  <div class="page_tit">应用列表</div>
+  <div class="Toolbar_inbox">
+    <!-- <div class="page right"></div> -->
+    <span>已安装应用</span>
+  </div>
+  <div class="list">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <th class="line_l">应用图标</th>
+    <th class="line_l">应用名称</th>
+    <th class="line_l">应用别名</th>
+    <th class="line_l">应用类型</th>
+    <th class="line_l">作者</th>
+    <th class="line_l">贡献者</th>
+    <th class="line_l">状态</th>
+    <th class="line_l">状态设置</th>
+    <th class="line_l">排序</th>
+    <th class="line_l">操作</th>
+  </tr>
+  
+      <tr><td>暂无待安装应用</td></tr>
+      
+    </tbody></table>
+  </div>
+  <div class="Toolbar_inbox">
+    <!-- <div class="page right"></div> -->
+    <span>&nbsp;</span>
+  </div>
+</div>
+
+</body></html>
