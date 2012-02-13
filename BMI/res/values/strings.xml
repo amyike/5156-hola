@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BMI</string>
+    <string name="height">身高（cm）</string>
+    <string name="weight">体重（kg）</string>
+    <string name="bmi_btn">计算 BMI 值</string>
+    <string name="bmi_result">你的 BMI 值是</string>
+    <string name="input_error">打错了吗？只能输入数字喔</string>
+    <string name="about_title">关于 Android BMI</string>
+    <string name="about_msg">Android BMI Calc</string>
+    <string name="ok_lable">确认</string>
+    <string name="homepage_lable">首页</string>
+    <string name="homepage_uri">http://sites.google.com/site/gasodroid/</string>
+    <string name="prompt_feet">Select Feet</string>
+    <string name="prompt_inch">Select Inch</string>
+
+    <string-array name="feets">
+        <item>2 Feet</item>
+        <item>3 Feet</item>
+        <item>4 Feet</item>
+        <item>5 Feet</item>
+        <item>6 Feet</item>
+        <item>7 Feet</item>
+        <item>8 Feet</item>
+    </string-array>
+    <string-array name="inches">
+        <item>0 Inch</item>
+        <item>1 Inch</item>
+        <item>2 Inch</item>
+        <item>3 Inch</item>
+        <item>4 Inch</item>
+        <item>5 Inch</item>
+        <item>6 Inch</item>
+        <item>7 Inch</item>
+        <item>8 Inch</item>
+        <item>9 Inch</item>
+        <item>10 Inch</item>
+        <item>11 Inch</item>
+    </string-array>
+
+</resources>
