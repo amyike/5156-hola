@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body>
+<div class="so_main">
+  <div class="page_tit">附件配置</div>
+  
+  <div class="form2">
+  	<form method="post" action="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Global&amp;act=attachConfig">
+    <dl class="lineD">
+      <dt>目录规则：</dt>
+      <dd>
+        <input name="attach_path_rule" value="Y/md/H/" type="text">
+        <p>注：不建议修改</p>
+      </dd>
+    </dl>
+    <dl class="lineD">
+      <dt>最大允许值：</dt>
+      <dd>
+        <input name="attach_max_size" value="2" type="text">
+        <p>单位：兆(M) 允许使用小数点。如：0.5或2等</p>
+      </dd>
+    </dl>
+    <dl>
+      <dt>扩展名限定：</dt>
+      <dd>
+        <input name="attach_allow_extension" value="jpg,gif,png,jpeg,bmp,zip,rar,doc,xls,ppt,docx,xlsx,pptx,pdf" type="text">
+        <p>多个使用英文的“,”分割</p>
+      </dd>
+    </dl>
+    <div class="page_btm">
+      <input class="btn_b" value="确定" type="submit">
+    </div>
+    <input name="__hash__" value="09cd83ccd29fb21d335ee839915b2613" type="hidden"></form>
+  </div>
+
+</div>
+
+</body></html>

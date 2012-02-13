@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>亲邻网管理后台</title>
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link href="index_data/box.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index_data/common.js"></script>
+<script type="text/javascript" src="index_data/box.js"></script>
+</head>
+<body>
+<div class="so_main">
+
+  <div id="search_div" style="display:none;">
+    <div class="page_tit">搜索私信 [ <a href="javascript:void(0);" onClick="searchMessage();">隐藏</a> ]</div>
+    <div class="form2">
+    <form method="post" action="http://211.155.227.148:6688/index.php?app=admin&amp;mod=Content&amp;act=doSearchMessage">
+    <input name="isSearch" value="1" type="hidden">
+    <dl class="lineD">
+      <dt>ID：</dt>
+      <dd><input name="message_id" type="text"><p>多个时使用英文的“,”分割</p></dd>
+    </dl>
+    
+    <dl class="lineD">
+      <dt>发信人ID：</dt>
+      <dd>
+        <input name="from_uid" type="text">
+        <p>用户ID,多个时使用英文的","分割</p>
+      </dd>
+    </dl>
+    
+    <dl class="lineD">
+      <dt>收信人ID：</dt>
+      <dd>
+        <input name="to_uid" type="text">
+        <p>用户ID,多个时使用英文的","分割</p>
+      </dd>
+    </dl>
+    
+    <dl class="lineD">
+      <dt>标题：</dt>
+      <dd>
+        <input name="title" type="text">
+        <p>使用标题关键字进行模糊查询</p>
+      </dd>
+    </dl>
+    <div class="page_btm">
+      <input class="btn_b" value="确定" type="submit">
+    </div>
+    <input name="__hash__" value="f4d1866696934d9f81118e1a9fbe88a2" type="hidden"></form>
+  </div>
+  </div>
+  
+  <div class="page_tit">私信管理</div>
+  <div class="Toolbar_inbox">
+    <div class="page right"></div>
+    <a href="javascript:void(0);" class="btn_a" onClick="searchMessage();">
+        <span class="search_action">搜索私信</span>
+    </a>
+    <a href="javascript:void(0);" class="btn_a" onClick="deleteRecord();"><span>删除记录</span></a>
+  </div>
+  <div class="list">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <th style="width: 30px;">
+        <input id="checkbox_handle" onClick="checkAll(this)" value="0" type="checkbox">
+        <label for="checkbox"></label>
+    </th>
+    <th class="line_l">ID</th>
+    <th class="line_l">源ID</th>
+    <th class="line_l">发信人</th>
+    <th class="line_l">收信人</th>
+    <th class="line_l">标题</th>
+    <th class="line_l">内容</th>
+    <th class="line_l">时间</th>
+    <th class="line_l">操作</th>
+  </tr>
+  <tr class="" overstyle="on" id="message_6">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="6" type="checkbox"></td>
+        <td>6</td>
+        <td>2</td>
+        <td>1<br>管理员</td>
+        <td>2<br>wangfeng</td>
+        <td>回复: fefewf</td>
+        <td>fdsfdsfsrerewrerr</td>
+        <td>2011-11-10 20:27</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('6')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="message_5">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="5" type="checkbox"></td>
+        <td>5</td>
+        <td>5</td>
+        <td>1<br>管理员</td>
+        <td>2<br>wangfeng</td>
+        <td>hkjh</td>
+        <td>k;lk;</td>
+        <td>2011-11-06 00:27</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('5')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="message_4">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="4" type="checkbox"></td>
+        <td>4</td>
+        <td>2</td>
+        <td>2<br>wangfeng</td>
+        <td>1<br>管理员</td>
+        <td>回复: fefewf</td>
+        <td>333333</td>
+        <td>2011-11-06 00:22</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('4')">删除</a></td>
+      </tr><tr class="" overstyle="on" id="message_3">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="3" type="checkbox"></td>
+        <td>3</td>
+        <td>2</td>
+        <td>1<br>管理员</td>
+        <td>2<br>wangfeng</td>
+        <td>回复: fefewf</td>
+        <td>ewfewf</td>
+        <td>2011-11-06 00:18</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('3')">删除</a></td>
+      </tr><tr overstyle="on" id="message_2">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="2" type="checkbox"></td>
+        <td>2</td>
+        <td>2</td>
+        <td>1<br>管理员</td>
+        <td>2<br>wangfeng</td>
+        <td>fefewf</td>
+        <td>ewfewfewf</td>
+        <td>2011-11-06 00:17</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('2')">删除</a></td>
+      </tr><tr overstyle="on" id="message_1">
+        <td><input name="checkbox" id="checkbox2" onClick="checkon(this)" value="1" type="checkbox"></td>
+        <td>1</td>
+        <td>1</td>
+        <td>1<br>管理员</td>
+        <td>5<br>wangfeng3</td>
+        <td>fefewf</td>
+        <td>ewfewfewf</td>
+        <td>2011-11-06 00:17</td>
+        <td><a href="javascript:void(0);" onClick="deleteRecord('1')">删除</a></td>
+      </tr>  </tbody></table>
+  </div>
+  <div class="Toolbar_inbox">
+    <div class="page right"></div>
+    <a href="javascript:void(0);" class="btn_a" onClick="searchMessage();">
+        <span class="search_action">搜索私信</span>
+    </a>
+    <a href="javascript:void(0);" class="btn_a" onClick="deleteRecord();"><span>删除记录</span></a>
+  </div>
+</div>
+
+<script>
+    //鼠标移动表格效果
+    $(document).ready(function(){
+        $("tr[overstyle='on']").hover(
+          function () {
+            $(this).addClass("bg_hover");
+          },
+          function () {
+            $(this).removeClass("bg_hover");
+          }
+        );
+    });
+    
+    function checkon(o){
+        if( o.checked == true ){
+            $(o).parents('tr').addClass('bg_on') ;
+        }else{
+            $(o).parents('tr').removeClass('bg_on') ;
+        }
+    }
+    
+    function checkAll(o){
+        if( o.checked == true ){
+            $('input[name="checkbox"]').attr('checked','true');
+            $('tr[overstyle="on"]').addClass("bg_on");
+        }else{
+            $('input[name="checkbox"]').removeAttr('checked');
+            $('tr[overstyle="on"]').removeClass("bg_on");
+        }
+    }
+
+    //获取已选择用户的ID数组
+    function getChecked() {
+        var ids = new Array();
+        $.each($('table input:checked'), function(i, n){
+            ids.push( $(n).val() );
+        });
+        return ids;
+    }
+    
+    function deleteRecord(ids) {
+    	var length = 0;
+    	if(ids) {
+    		length = 1;    		
+    	}else {
+    		ids    = getChecked();
+    		length = ids.length;
+            ids    = ids.toString();
+    	}
+    	if(ids=='') {
+    		ui.error('请先选择一个私信');
+    		return ;
+    	}
+    	if(confirm('您将删除'+length+'条记录，删除后无法恢复，确定继续？')) {
+    		$.post("http://211.155.227.148:6688/index.php?app=admin&mod=Content&act=doDeleteMessage",{ids:ids},function(res){
+    			if(res=='1') {
+    				ui.success('删除成功');
+    				removeItem(ids);
+    			}else {
+    				ui.error('删除失败');
+    			}
+    		});
+    	}
+    }
+    
+    function removeItem(ids) {
+    	ids = ids.split(',');
+        for(i = 0; i < ids.length; i++) {
+            $('#message_'+ids[i]).remove();
+        }
+    }
+    
+    //搜索用户
+    var isSearchHidden = 1;
+    function searchMessage() {
+        if(isSearchHidden == 1) {
+            $("#search_div").slideDown("fast");
+            $(".search_action").html("搜索完毕");
+            isSearchHidden = 0;
+        }else {
+            $("#search_div").slideUp("fast");
+            $(".search_action").html("搜索私信");
+            isSearchHidden = 1;
+        }
+    }
+</script>
+
+
+</body></html>
