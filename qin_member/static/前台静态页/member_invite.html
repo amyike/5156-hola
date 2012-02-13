@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>好友邀请列表</title>
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+<link href="css/member.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/public.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<!--[if !IE]>网页顶部logo及导航<![endif]-->
+<div class="top">
+    <div class="top_main">
+	    <div class="top_bg_l"></div>
+		<h1 class="logo"></h1>
+		<div class="navigation">
+		     <ul>
+			    <li class="n1_current"><a href="index.html">我的首页</a></li>
+			    <li><a href="find.html">发现推荐</a></li>
+				<li><a href="community.html">社区主页</a></li>
+				<li><a href="cityinfo.html">精彩同城</a></li>
+				<li><a href="jobsindex.html">求职招聘</a></li>
+			 </ul>
+		</div>
+		<div class="message">
+		     <ul>
+			    <li class="m1"><a href="member_site.html">设置</a></li>
+				<li class="m2"><a href="member_invite.html">邀请</a></li>
+				<li class="m3"><a href="#">手机</a></li>
+				<li class="m4"><a href="#">退出</a></li>
+			 </ul>
+		</div>
+	</div>
+</div>
+<!--[if !IE]>网页顶部logo及导航(结束)<![endif]-->
+
+<!--[if !IE]>好友邀请主要<![endif]-->
+    <div class="invite_all"><h2>邀请好友加入亲邻</h2></div>
+	
+	<!--[if !IE]>链接邀请<![endif]-->
+	<div class="invite_link">
+	    <dl>
+		    <dt>1</dt>
+			<dd class="inv_link1">链接邀请</dd>
+			<dd class="inv_link2"></dd>
+		</dl>
+		<ul>
+		    <li class="inv_linkli1">复制邀请链接发给QQ、MSN好友</li>
+			<li class="inv_linkli2"><input class="in" name="" type="text" value="http://www.qinlin.com/j/88/?icd=6987" /></li>
+			<li class="inv_linkli3"><a href="#none">复制</a></li>
+		</ul>
+	</div>
+	<!--[if !IE]>链接邀请(结束)<![endif]-->
+	
+	<!--[if !IE]>邀请站外好友<![endif]-->
+	<div class="invite_link">
+	     <dl>
+		    <dt>2</dt>
+			<dd class="inv_link3">邀请站外好友</dd>
+			<dd class="inv_link2"></dd>
+		</dl>
+		<div class="invite_outside">
+		     <span class="inv_libg1">新浪微博</span>
+			 <span class="inv_libg2">腾讯微博</span>
+			 <span class="inv_libg3">人人</span>
+			 <span class="inv_libg4">开心</span>
+			 <span class="inv_libg5">豆瓣</span>
+			 <span class="inv_libg3">QQ空间</span>
+		 </div>
+	</div>
+	<!--[if !IE]>邀请站外好友(结束)<![endif]-->
+	
+	<!--[if !IE]>邀请msn及邮箱联系人<![endif]-->
+	<div class="invite_msn">
+	   <div class="inv_msnemail">
+	       <dl>
+		      <dt>3</dt>
+			  <dd>邀请MSN好友</dd>
+		   </dl>
+		   <div class="inv_note">登录你的MSN，选择好友并发送邀请</div>
+		   <ul>
+		       <li><span class="inv_msnspan">账号：</span><input class="inv_msninput in" name="" type="text" /></li>
+			   <li><span class="inv_msnspan">密码：</span><input class="inv_msninput in" name="" type="password" /></li>
+		   </ul>
+		   <div class="inv_msnbut"><a href="#none">登录</a></div>
+	   </div>
+	   <div class="inv_line2"></div>
+	   <div class="inv_msnemail">
+	       <dl>
+		      <dt></dt>
+			  <dd>邀请邮箱联系人</dd>
+		   </dl>
+		   <div class="inv_note">登录你的MSN，选择好友并发送邀请</div>
+		   <ul>
+		       <li><span class="inv_msnspan">账号：</span><input class="inv_msninput inv_msninput2 in" name="" type="text" /><span class="inv_msnspan2">@</span><select class="inv_msnselect">
+		         <option>sina.com</option>
+		       </select></li>
+			   <li><span class="inv_msnspan">密码：</span><input class="inv_msninput in" name="" type="password" /></li>
+		   </ul>
+		   <div class="inv_msnbut"><a href="#none">登录</a></div>
+	   </div>
+	   
+	</div>
+	<!--[if !IE]>邀请msn及邮箱联系人(结束)<![endif]-->
+	
+	<!--[if !IE]>邮箱邀请<![endif]-->
+	<div class="invite_email">
+	      <dl>
+		     <dt>4</dt>
+			 <dd>邮件邀请</dd>
+		  </dl>
+		  <div class="inv_emailzi">
+		      <ul>
+			      <li class="email_li1">邮箱：</li>
+				  <li class="email_li2">附言：</li>
+			  </ul>
+		  </div>
+		  <input class="inv_msninput inv_emailname in" name="" type="text" value="输入邮箱地址，多个邮箱用逗号分隔" focucmsg="输入邮箱地址，多个邮箱用逗号分隔" />
+		  <textarea class="inv_textarea in" name="" cols="" rows=""></textarea>
+		  <div class="inv_emailbut"><a href="#none">发送</a></div>
+	</div>
+	<!--[if !IE]>邮箱邀请(结束)<![endif]-->
+
+<!--[if !IE]>好友邀请主要(结束)<![endif]-->
+
+<div class="kong"></div>
+</body>
+</html>
