@@ -1,0 +1,248 @@
+﻿/* CSS Document */
+/*个人空间-首页3*/
+.body_space3{
+ background:url(../images/space3_topbg.jpg) no-repeat fixed;
+ position:relative;
+ _background-attachment:fixed;
+ height:100%;
+}
+.space3_name{
+ position:fixed;
+ _position: absolute;
+ _right:expression(eval(document.documentElement.scrollLeft+197));
+ _top:expression(eval(document.documentElement.scrollTop+60));
+ right:197px;
+ top:60px;
+ width:230px;
+ height:auto;
+ z-index:110;
+}
+.space3_name_use{
+ float:left;
+ width:206px;
+ height:40px;
+ font-size:20px;
+ font-weight:500;
+ padding:40px 0px 0px 24px;
+ background:url(../images/space3_btn1.png) no-repeat 0px -121px;
+}
+.space3_name_use a{
+ color:#258281;
+}
+.space3_name_use a:hover{
+ color:#525252;
+}
+.space3_name_main{
+ float:left;
+ width:178px;
+ height:auto;
+ background:url(../images/space3_namebg.png) repeat-y;
+ color:#676767;
+ padding:0px 29px 0px 23px;
+}
+.space3_name_main dl{
+ list-style:none;
+}
+.space3_name_main dl dt{
+ float:left;
+ width:178px;
+ height:28px;
+ line-height:20px;
+ font-size:14px;
+ border-bottom:#d5d5d5 1px solid;
+}
+.space3_name_main dl dd{
+ float:left;
+ width:178px;
+ line-height:auto;
+ font-size:12px;
+ line-height:22px;
+ padding:10px 0px 14px 0px;
+}
+.space3_name_bottom{
+ float:left;
+ width:230px;
+ height:15px;
+ background:url(../images/space3_btn1.png) no-repeat 0px -373px;
+}
+.space3_frame{
+ position:absolute;
+ right:463px;
+ top:45px;
+ width:498px;
+ height:auto;
+ overflow:hidden;
+ z-index:100;
+}
+.space3_top{
+ float:left;
+ width:498px;
+ height:92px;
+ background:url(../images/space3_btn1.png) no-repeat;
+}
+.space3_main{
+ float:left;
+ width:454px;
+ height:auto;
+ background:url(../images/space3_mainbg.png) repeat-y;
+ padding-left:44px;
+}
+.space3_title{
+ float:left;
+ width:454px;
+ height:32px;
+ font-size:20px;
+ font-weight:500;
+ color:#151515;
+}
+.space3_title a{
+ color:#151515;
+}
+.space3_title a:hover{
+ color:#568D99;
+}
+.space3_time{
+ float:left;
+ width:454px;
+ height:22px;
+ font-size:12px;
+ color:#b8b8b8;
+}
+.width420{
+ width:420px;
+}
+.space3_talk{
+ width:400px;
+ height:auto;
+}
+.space3_line{
+ float:left;
+ width:410px;
+ height:1px;
+ overflow:hidden;
+ border-bottom:#d5d5d5 1px solid;
+ margin:28px 0px 22px 0px;
+ *float:none;
+ *clear:both;
+}
+.width280{
+ width:280px;
+}
+.video_sp3 object{
+ width:400px !important;
+}
+.video_sp3 embed{
+ width:400px !important;
+}
+.width400{
+ width:400px;
+}
+.space3_bottom{
+ float:left;
+ width:498px;
+ height:25px;
+ background:url(../images/space3_btn1.png) no-repeat 0px -99px;
+}
+.marginl0{
+ margin-left:0px;
+}
+.space3_video{
+ width:400px;
+ margin:5px 0px 5px;
+ text-align:center;
+}
+.space3_img{
+ width:400px;
+ margin:5px 0px 5px;
+ text-align:center;
+}
+.space3_img img{
+ max-width:400px;
+ _width:expression(this.width > 400 ? "400px" : true);/*支持IE6*/
+}
+.space3_tag{
+ float:left;
+ width:395px;
+ line-height:20px;
+ font-size:12px;
+ color:#595959;
+ padding-left:5px;
+}
+.space3_tag a{
+ color:#595959;
+ margin-right:10px;
+}
+.space3_tag a:hover{
+ color:#568D99;
+}
+.margint28{
+ margin-top:28px;
+}
+.width390mt{
+ width:390px;
+ margin-top:10px;
+}
+.marginl-4{
+ margin-left:-4px;
+}
+.dtddwidth400{
+ width:400px;
+}
+.dtddwidth400 dt{
+ margin-left:0px !important;
+}
+.dtddwidth400 dd{
+ width:364px !important;
+}
+.space3_talkfull{
+ margin-left:18px;
+ width:382px;
+}
+.space3_lr{
+ top:0px;
+ height:100%;
+ z-index:60;
+ position:fixed;
+ _position:absolute;
+}
+.space3_w35{
+ width:35%;
+}
+.space4_w25{
+ width:25%;
+}
+.space3_lr a{
+  position:fixed;
+ _position: absolute;
+ _top:expression(eval(document.documentElement.scrollTop+400));
+  top:400px;
+ display:block;
+ width:90px;
+ height:90px;
+ color:#fff;
+ font-size:24px;
+ line-height:90px;
+ text-align:center;
+ background:url(../images/space3_btn1.png) no-repeat -332px -140px;
+}
+.space3_left{
+ left:0px;
+}
+.space3_left a{
+ _left:expression(eval(document.documentElement.scrollLeft+150));
+ left:150px;
+}
+.space3_lr a:hover{
+ background:url(../images/space3_btn1.png) no-repeat -332px -244px;
+ text-decoration:none;
+}
+.space3_right{
+ right:0px;
+}
+.space3_right a{
+ _right:expression(eval(document.documentElement.scrollLeft+150));
+ right:150px;
+}
+.next{
+ *display:block !important;
+}

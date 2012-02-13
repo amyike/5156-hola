@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>分享文字</title>
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+<link href="css/share.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript" charset="utf-8" src="ueditor/editor_config1.js"></script>
+    
+<!--开发版-->
+<script type="text/javascript" charset="utf-8" src="ueditor/editor_api.js">
+    paths = [
+            'editor.js',
+            'core/browser.js',
+            'core/utils.js',
+            'core/EventBase.js',
+            'core/dom/dom.js',
+            'core/dom/dtd.js',
+            'core/dom/domUtils.js',
+            'core/dom/Range.js',
+            'core/dom/Selection.js',
+            'core/Editor.js',
+            'commands/inserthtml.js',
+            'commands/image.js',
+            'commands/justify.js',
+            'commands/font.js',
+            'commands/link.js',
+            'commands/removeformat.js',
+            'commands/blockquote.js',
+            'commands/list.js',
+            'commands/indent.js',
+            'commands/print.js',
+            'commands/preview.js',
+            'commands/selectall.js',
+            'commands/paragraph.js',
+            'commands/directionality.js',
+            'commands/horizontal.js',
+            'commands/time.js',
+            'commands/inserthtml.js',
+            'commands/rowspacing.js',
+            'commands/cleardoc.js',
+            'commands/anchor.js',
+            'commands/delete.js',
+            'plugins/pagebreak/pagebreak.js',
+            'plugins/undo/undo.js',
+            'plugins/paste/paste.js',
+            'plugins/source/source.js',
+            'plugins/shortcutkeys/shortcutkeys.js',
+            'plugins/enterkey/enterkey.js',
+            'plugins/keystrokes/keystrokes.js',
+            'plugins/fiximgclick/fiximgclick.js',
+            'plugins/autolink/autolink.js',
+            'plugins/autoheight/autoheight.js',
+            'plugins/autofloat/autofloat.js',  //依赖UEditor UI,在IE6中，会覆盖掉body的背景图属性
+            'plugins/highlight/highlight.js',
+            'plugins/serialize/serialize.js',
+            'plugins/video/video.js',
+            'plugins/table/table.js',
+            'plugins/contextmenu/contextmenu.js',
+            'plugins/pagebreak/pagebreak.js',
+            'plugins/basestyle/basestyle.js',
+            'plugins/elementpath/elementpath.js',
+            'plugins/formatmatch/formatmatch.js',
+            'plugins/searchreplace/searchreplace.js',
+            'ui/ui.js',
+            'ui/uiutils.js',
+            'ui/uibase.js',
+            'ui/separator.js',
+            'ui/mask.js',
+            'ui/popup.js',
+            'ui/colorpicker.js',
+            'ui/tablepicker.js',
+            'ui/stateful.js',
+            'ui/button.js',
+            'ui/splitbutton.js',
+            'ui/colorbutton.js',
+            'ui/tablebutton.js',
+            'ui/toolbar.js',
+            'ui/menu.js',
+            'ui/combox.js',
+            'ui/dialog.js',
+            'ui/menubutton.js',
+            'ui/editorui.js',
+            'ui/editor.js',
+            'ui/multiMenu.js'
+        ];
+</script>
+<link rel="stylesheet" type="text/css" href="ueditor/themes/default/ueditor.css"/>
+<style>
+ #editor { width: 600px;}
+</style>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<!--[if !IE]>网页顶部logo及导航<![endif]-->
+<div class="top">
+    <div class="top_main">
+	    <div class="top_bg_l"></div>
+		<h1 class="logo"></h1>
+		<div class="navigation">
+		     <ul>
+			    <li class="n1_current"><a href="index.html">我的首页</a></li>
+			    <li><a href="find.html">发现推荐</a></li>
+				<li><a href="community.html">社区主页</a></li>
+				<li><a href="cityinfo.html">精彩同城</a></li>
+				<li><a href="jobsindex.html">求职招聘</a></li>
+			 </ul>
+		</div>
+		<div class="message">
+		     <ul>
+			    <li class="m1"><a href="member_site.html">设置</a></li>
+				<li class="m2"><a href="member_invite.html">邀请</a></li>
+				<li class="m3"><a href="#">手机</a></li>
+				<li class="m4"><a href="#">退出</a></li>
+			 </ul>
+		</div>
+	</div>
+</div>
+<!--[if !IE]>网页顶部logo及导航(结束)<![endif]-->
+
+<!--[if !IE]>分享页框架<![endif]-->
+<div class="share_frame">
+
+    <!--[if !IE]>输入框<![endif]-->
+    <h2>发布文字</h2>
+	<div class="share_textone">
+	    <dl>
+		   <dt>标题<em>（可不填）</em></dt>
+		   <dd><input name="" type="text" class="input_class" /></dd>
+		</dl>
+	</div>
+    <!--[if !IE]>输入框（结束）<![endif]-->
+    
+	<!--[if !IE]>添加标签(结束)<![endif]-->
+	<div class="add_tag">
+	<input class="add_tag_text" name="" type="text" value="添加标签，用空格或者回车分隔" focucmsg="添加标签，用空格或者回车分隔" />
+	<div class="add_tagmain">
+	     <ul class="xie">
+		    
+		 </ul>
+	</div>
+	</div>
+	<!--[if !IE]>添加标签(结束)<![endif]-->
+	
+	<!--[if !IE]>编辑器<![endif]-->
+	<div class="editor_e">
+	    <h4>内容</h4>
+		<div  id="editor"></div>
+        <script type="text/javascript">
+              var editor = new baidu.editor.ui.Editor();
+              editor.render('editor');
+         </script>
+	</div>
+	<!--[if !IE]>编辑器(结束)<![endif]-->
+	
+	<!--[if !IE]>复选框<![endif]-->
+	<div class="share_checkbox">
+	   <ul>
+	      <li class="margin_l50">
+		  <span class="check_span"><input name="" type="checkbox" value="" class="checkbox_class" /></span>
+		  文章置顶<em>（每个博客只能置顶一篇文章）</em>
+		  </li>
+		  <li class="margin_l250">
+		  <span class="check_span"><input name="" type="checkbox" value="" class="checkbox_class" /></span>
+		  仅自己可见
+		  </li>
+	   </ul>
+	</div>
+	<!--[if !IE]>复选框（结束）<![endif]-->
+	
+	<!--[if !IE]>三个按钮<![endif]-->
+	<div class="share_button">
+	   <div class="share_select">
+	      <select name="" class="select_s">
+	        <option>立即发布</option>
+	        <option>保存到草稿</option>
+	        <option>加到自动发布列别</option>
+	        <option>仅自己可见</option>
+            </select>
+	   </div>
+	   <div class="share_butsel">
+		<a class="s_but1" href="#">取消</a>
+		 <div id="edui43">
+		   <div onMouseOut="$EDITORUI[&quot;edui43&quot;].Stateful_onMouseOut(event, this);" onMouseOver="$EDITORUI[&quot;edui43&quot;].Stateful_onMouseOver(event, this);" onMouseUp="$EDITORUI[&quot;edui43&quot;].Stateful_onMouseUp(event, this);" onMouseDown="$EDITORUI[&quot;edui43&quot;].Stateful_onMouseDown(event, this);" id="edui43_state" class=" ">
+		       <a class="s_but1" href="#" onClick="return $EDITORUI[&quot;edui43&quot;]._onClick();" onMouseDown="return false;"  title="预览" unselectable="on" id="edui43_body">预览</a>
+		   </div>
+		</div>
+		<a class="s_but2" href="#">发布</a>
+	   </div>
+	</div>
+
+</div>
+<!--[if !IE]>分享页框架(结束)<![endif]-->
+</body>
+</html>
