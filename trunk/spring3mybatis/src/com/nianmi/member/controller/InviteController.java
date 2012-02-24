@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.nianmi.member.mapper.InviteCauseMapper;
 import com.nianmi.member.pojo.TsInviteCause;
+import com.nianmi.member.service.impl.InviteCauseService;
 
 /**
  * 邀请
@@ -22,18 +22,21 @@ import com.nianmi.member.pojo.TsInviteCause;
 @RequestMapping("/invite")
 public class InviteController extends BaseController {
 
-	// @Autowired
-	// private InviteCauseService inviteCauseService;
-
 	@Autowired
-	private InviteCauseMapper<TsInviteCause> inviteCauseMapper;
+	private InviteCauseService inviteCauseService;
+
+	// @Autowired
+	// private InviteCauseMapper<TsInviteCause> inviteCauseMapper;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String index() {
 		try {
-			// System.out.println(inviteCauseService.count());
-			System.out.println(inviteCauseMapper.count());
-			System.out.println(inviteCauseMapper.findById(111));
+			System.out.println(inviteCauseService.count());
+			System.out.println(inviteCauseService.findById(111));
+
+			TsInviteCause tsInviteCause = new TsInviteCause(1, "a", "b", "c",
+					"d", 1);
+			inviteCauseService.save(tsInviteCause);
 
 		} catch (Exception e) {
 			e.printStackTrace();

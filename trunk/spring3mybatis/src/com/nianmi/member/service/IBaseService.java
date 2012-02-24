@@ -25,7 +25,7 @@ public interface IBaseService<T> {
 	 * @return
 	 * @throws BizException
 	 */
-	T find(final Serializable id) throws BizException;
+	T findById(final long id) throws BizException;
 
 	/**
 	 * 分页查询

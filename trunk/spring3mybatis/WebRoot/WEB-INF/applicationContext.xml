@@ -19,8 +19,8 @@
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<context:component-scan base-package="com.nianmi.member">
-		<context:exclude-filter type="regex"
-			expression="com.nianmi.member.controller.*" />
+<!-- 		<context:exclude-filter type="regex" -->
+<!-- 			expression="com.nianmi.member.controller.*" /> -->
 	</context:component-scan>
 
 	<!-- Configure the data source -->
@@ -33,14 +33,15 @@
 	</bean>
 
 	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.nianmi.member.mapper"/>
+		<property name="basePackage" value="com.nianmi.member.mapper" />
 	</bean>
 
 
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
-	
-<!-- 		<property name="dataSource" ref="dataSource" /> -->
-<!-- 		<property name="mapperLocations" value="com.nianmi.member.pojo.*" /> -->
+		<property name="mapperLocations" value="classpath*:mapper-configs/*.xml" />
+		<!-- <property name="dataSource" ref="dataSource" /> -->
+		<!-- <property name="mapperLocations" value="com.nianmi.member.pojo.*" 
+			/> -->
 	</bean>
 
 
