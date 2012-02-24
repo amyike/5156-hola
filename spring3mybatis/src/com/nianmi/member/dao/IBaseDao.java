@@ -1,8 +1,5 @@
 package com.nianmi.member.dao;
 
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-
 import com.nianmi.member.exception.BizException;
 
 /**
@@ -23,8 +20,7 @@ public interface IBaseDao<T> {
 	 * @return
 	 * @throws BizException
 	 */
-	@Select("select * from ts_invite_cause where id = ${id}")
-	T findById(@Param("id") final long id) throws BizException;
+	T findById(final long id) throws BizException;
 
 	/**
 	 * 分页查询
@@ -43,7 +39,6 @@ public interface IBaseDao<T> {
 	 * @return
 	 * @throws BizException
 	 */
-	@Select("select count(1) from ts_invite_cause")
 	int count() throws BizException;
 
 	/**
@@ -52,7 +47,7 @@ public interface IBaseDao<T> {
 	 * @param pojo
 	 * @throws BizException
 	 */
-	// void save(final T pojo) throws BizException;
+	void save(final T pojo) throws BizException;
 
 	/**
 	 * 更新
@@ -60,7 +55,7 @@ public interface IBaseDao<T> {
 	 * @param pojo
 	 * @throws BizException
 	 */
-	// void update(final T pojo) throws BizException;
+	void update(final T pojo) throws BizException;
 
 	/**
 	 * 根据 ID 删除
@@ -68,5 +63,5 @@ public interface IBaseDao<T> {
 	 * @param ids
 	 * @throws BizException
 	 */
-	// void delete(final Serializable id) throws BizException;
+	void deleteById(final long id) throws BizException;
 }

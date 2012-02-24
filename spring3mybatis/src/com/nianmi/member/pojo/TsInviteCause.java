@@ -2,11 +2,13 @@ package com.nianmi.member.pojo;
 
 import java.io.Serializable;
 
+import org.apache.ibatis.type.Alias;
+
 /**
  * The persistent class for the ts_invite_cause database table.
  * 
  */
-
+@Alias("inviteCause")
 public class TsInviteCause implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -24,6 +26,17 @@ public class TsInviteCause implements Serializable {
 	private int status;
 
 	public TsInviteCause() {
+	}
+
+	public TsInviteCause(int id, String contact, String hobby, String link,
+			String reason, int status) {
+		super();
+		this.id = id;
+		this.contact = contact;
+		this.hobby = hobby;
+		this.link = link;
+		this.reason = reason;
+		this.status = status;
 	}
 
 	public int getId() {
@@ -77,7 +90,8 @@ public class TsInviteCause implements Serializable {
 	@Override
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		sb.append("id:").append(id).append("reason").append(reason);
+		sb.append(this.id + "  " + this.contact + "  " + this.hobby + "  "
+				+ this.link + "  " + this.reason + "  " + this.status);
 		return sb.toString();
 	}
 }

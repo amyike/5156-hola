@@ -1,14 +1,13 @@
 package com.nianmi.member.mapper;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-
-import com.nianmi.member.pojo.TsInviteCause;
 
 /**
  * @function 所有的Mapper继承这个接口
@@ -16,16 +15,18 @@ import com.nianmi.member.pojo.TsInviteCause;
  * 
  * 
  */
+
 public interface SqlMapper<T> {
-	@Result(javaType = TsInviteCause.class)
-	@Select("select * from ts_invite_cause where id = #{id}")
-	T findById(final long id);
 
-	@Select("select * from ts_invite_cause where c_id = #{uname}")
+	@Select("select * from ${tableName} where id = #{id}")
+	Map<String, Object> findById(@Param("tableName") final String tableName,
+			@Param("id") final long id);
+
+	@Select("select count(1) from ${tableName}")
+	int count(@Param("tableName") final String tableName);
+
+	@Select("select * from ts_invite_cause where status = 1")
 	List<T> find(final int pageFirst, final int pageSize);
-
-	@Select("select count(1) from ts_invite_cause")
-	int count();
 
 	@Insert("")
 	void save(final T pojo);
@@ -33,6 +34,6 @@ public interface SqlMapper<T> {
 	@Update("")
 	void update(final T pojo);
 
-	@Delete("")
-	void deleteById(final long id);
+	@Delete("delete from ${tableName} where id = #{id}")
+	void deleteById(@Param("tableName") final String tableName, final long id);
 }
