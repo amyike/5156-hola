@@ -19,7 +19,7 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 	<!-- publishTime=#{publishTime}# where blogid=#{blogid} -->
 	<!-- </update> -->
 
-	<insert id="addInviteCause" parameterType="inviteCause">
+	<insert id="addInviteCause" parameterType="TsInviteCause">
 		insert into
 		Blog(author,subject,content, publishTime,blogid)
 		values(#{author}#,#{subject}#,#{content}#,#{publishTime}#,#{blogid})
