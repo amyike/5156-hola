@@ -4,17 +4,17 @@ import org.springframework.stereotype.Repository;
 
 import com.nianmi.member.dao.BaseDao;
 import com.nianmi.member.exception.BizException;
-import com.nianmi.member.pojo.TsInviteCause;
+import com.nianmi.member.pojo.TsInviteCause2;
 
 @Repository
-public class InviteCauseDao extends BaseDao<TsInviteCause> {
+public class InviteCauseDao extends BaseDao<TsInviteCause2> {
 
 	public InviteCauseDao() {
-		super("ts_invite_cause", TsInviteCause.class);
+		super("ts_invite_cause", TsInviteCause2.class);
 	}
 
 	@Override
-	public void save(TsInviteCause pojo) throws BizException {
+	public void save(TsInviteCause2 pojo) throws BizException {
 
 		getSqlSession().insert("addInviteCause", pojo);
 	}
