@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="resources/" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/servlet-api"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/com.springsource.org.apache.commons.dbcp-1.2.2.osgi.jar"/>
@@ -44,5 +44,7 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/asm-all-3.3.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mybatis-3.1.0-SNAPSHOT.jar" sourcepath="D:/Downloads/MyBatis/mybatis-3.1.0-SNAPSHOT-bundle/mybatis-3.1.0-SNAPSHOT/mybatis-3.1.0-SNAPSHOT-sources.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mybatis-spring-1.1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/com.springsource.javax.inject-1.0.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/persistence-api-1.0.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
