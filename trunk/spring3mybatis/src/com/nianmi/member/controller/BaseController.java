@@ -1,6 +1,9 @@
 package com.nianmi.member.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 abstract class BaseController implements IBaseController {
 
@@ -37,6 +40,13 @@ abstract class BaseController implements IBaseController {
 		model.addAttribute("action", "update");
 		model.addAttribute("actionName", "修改");
 		return name;
+	}
+
+	@ExceptionHandler
+	public String exception(Exception e, HttpServletRequest request) {
+		e.printStackTrace();
+		request.setAttribute("msg", e.getMessage());
+		return "error";
 	}
 
 }
