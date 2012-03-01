@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.nianmi.member.pojo.TsInviteCause;
+import com.nianmi.member.pojo.InviteCause;
 import com.nianmi.member.service.impl.InviteCauseService;
 
 /**
@@ -25,18 +25,20 @@ public class InviteController extends BaseController {
 	@Autowired
 	private InviteCauseService inviteCauseService;
 
-	// @Autowired
-	// private InviteCauseMapper<TsInviteCause> inviteCauseMapper;
-
 	@RequestMapping(method = RequestMethod.GET)
 	public String index() {
 		try {
-			System.out.println(inviteCauseService.count());
-			System.out.println(inviteCauseService.findById(111));
+			// System.out.println(inviteCauseService.count());
+			// System.out.println(inviteCauseService.find(111));
 
-			TsInviteCause tsInviteCause = new TsInviteCause(1, "a", "b", "c",
-					"d", 1);
-			inviteCauseService.save(tsInviteCause);
+			// InviteCause inviteCause = new InviteCause(677, "aa", "bb", "cc",
+			// "dd", 1);
+			// inviteCauseService.save(tsInviteCause);
+			// inviteCauseService.update(tsInviteCause);
+			// inviteCauseService.delete(676);
+			// System.out.println(inviteCauseService.find(677));
+
+			System.out.println(inviteCauseService.count());
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -47,7 +49,7 @@ public class InviteController extends BaseController {
 	// 获取邀请码
 	@RequestMapping(value = "get", method = RequestMethod.POST)
 	@ResponseBody
-	public Map<String, Object> get(TsInviteCause inviteCause) {
+	public Map<String, Object> get(InviteCause inviteCause) {
 		Map<String, Object> map = new HashMap<>();
 		try {
 			// inviteCauseService.save(inviteCause);
