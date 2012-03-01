@@ -6,18 +6,18 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.nianmi.member.dao.IBaseDao;
 import com.nianmi.member.dao.impl.InviteCauseDao;
-import com.nianmi.member.pojo.TsInviteCause;
+import com.nianmi.member.pojo.InviteCause;
 import com.nianmi.member.service.BaseService;
 
 @Service
 @Transactional
-public class InviteCauseService extends BaseService<TsInviteCause> {
+public class InviteCauseService extends BaseService<InviteCause> {
 
 	@Autowired
 	private InviteCauseDao inviteCauseDao;
 
 	@Override
-	public IBaseDao<TsInviteCause> getDao() {
+	public IBaseDao<InviteCause> getDao() {
 		return this.inviteCauseDao;
 	}
 
