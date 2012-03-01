@@ -1,6 +1,5 @@
 package com.nianmi.member.service;
 
-import java.io.Serializable;
 import java.util.List;
 
 import com.nianmi.member.dao.IBaseDao;
@@ -25,7 +24,7 @@ public interface IBaseService<T> {
 	 * @return
 	 * @throws BizException
 	 */
-	T findById(final long id) throws BizException;
+	T find(final long id) throws BizException;
 
 	/**
 	 * 分页查询
@@ -67,5 +66,5 @@ public interface IBaseService<T> {
 	 * @param ids
 	 * @throws BizException
 	 */
-	void delete(final Serializable id) throws BizException;
+	void delete(final long id) throws BizException;
 }
