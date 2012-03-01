@@ -9,7 +9,7 @@ import org.apache.ibatis.type.Alias;
  * 
  */
 @Alias("inviteCause")
-public class TsInviteCause implements Serializable {
+public class InviteCause implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -25,10 +25,10 @@ public class TsInviteCause implements Serializable {
 
 	private int status;
 
-	public TsInviteCause() {
+	public InviteCause() {
 	}
 
-	public TsInviteCause(int id, String contact, String hobby, String link,
+	public InviteCause(int id, String contact, String hobby, String link,
 			String reason, int status) {
 		super();
 		this.id = id;
