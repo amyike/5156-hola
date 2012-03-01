@@ -20,7 +20,7 @@ public interface IBaseDao<T> {
 	 * @return
 	 * @throws BizException
 	 */
-	T findById(final long id) throws BizException;
+	T find(final long id) throws BizException;
 
 	/**
 	 * 分页查询
@@ -63,5 +63,5 @@ public interface IBaseDao<T> {
 	 * @param ids
 	 * @throws BizException
 	 */
-	void deleteById(final long id) throws BizException;
+	void delete(final long id) throws BizException;
 }
