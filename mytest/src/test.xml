@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<module name="a">
+		<size name="100/200">
+			<width>100</width>
+			<high>200</high>
+		</size>
+		<size name="100/300">
+			<width>100</width>
+			<high>300</high>
+		</size>
+		<size name="200/200">
+			<width>200</width>
+			<high>200</high>
+		</size>
+	</module>
+	<module name="b">
+		<size name="100/200">
+			<width>100</width>
+			<high>200</high>
+		</size>
+		<size name="100/300">
+			<width>100</width>
+			<high>300</high>
+		</size>
+		<size name="200/200">
+			<width>200</width>
+			<high>200</high>
+		</size>
+	</module>
+</root>

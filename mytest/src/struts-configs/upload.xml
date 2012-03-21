@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="upload" extends="base">
+		<action name="upload" class="com.j2ee.high.action.Upload">
+			<result>/upload/success.jsp</result>
+		</action>
+	</package>
+</struts>    
