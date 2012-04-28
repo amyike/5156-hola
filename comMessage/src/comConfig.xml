@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hotel-config>
+  <db>
+    <type>PortBit</type>
+    <bit>COM1</bit>
+    <bit>COM2</bit>
+  </db>
+  <db>
+    <type>BaudRate</type>
+    <bit>38400</bit>
+    <bit>19200</bit>
+    <bit>9600</bit>
+    <bit>600</bit>
+  </db>
+  <db>
+    <type>DataBit</type>
+    <bit>8</bit>
+    <bit>7</bit>
+    <bit>6</bit>
+    <bit>5</bit>
+  </db>
+  <db>
+    <type>StopBit</type>
+    <bit>2</bit>
+    <bit>1</bit>
+    <bit>3</bit>
+  </db>
+  <db>
+    <type>CheckBit</type>
+    <bit>None</bit>
+    <bit>Odd</bit>
+    <bit>Even</bit>
+    <bit>Mark</bit>
+    <bit>Space</bit>
+  </db>
+  <db>
+    <type>Stream</type>
+    <bit>None</bit>
+    <bit>Hard_IN</bit>
+    <bit>Hard_OUT</bit>
+    <bit>Soft_IN</bit>
+    <bit>Soft_OUT</bit>
+  </db>
+</hotel-config>

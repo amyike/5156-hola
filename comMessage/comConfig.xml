@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 初始化配置文件请勿删除，否则后果自负 -->
+<hotel-config> 
+  <db> 
+    <type>PortBit</type>  
+    <!-- 可自行串口号，也可无需配置，串口会自动被载入-->  
+    <bit>COM1</bit> 
+  </db>  
+  <db> 
+    <type>BaudRate</type>  
+    <!-- 可自行配置波特率110bps-256000bps.(波特率>115200时需要硬件支持)-->  
+    <bit>38400</bit>  
+    <bit>19200</bit>  
+    <bit>9600</bit>  
+    <bit>2400</bit>  
+    <bit>600</bit>  
+    <bit>300</bit> 
+  </db>  
+  <db> 
+    <type>DataBit</type>  
+    <!-- 数据位：分别为8、7、6、5可根据需要自行配置-->  
+    <bit>8</bit>  
+    <bit>7</bit>  
+    <bit>6</bit>  
+    <bit>5</bit> 
+  </db>  
+  <db> 
+    <type>StopBit</type>  
+    <!-- 停止位：分别为1、2、3可根据需要自行配置-->  
+    <bit>2</bit>  
+    <bit>1</bit>  
+    <bit>3</bit> 
+  </db>  
+  <db> 
+    <type>CheckBit</type>  
+    <!-- 校验位：分别为None、Odd、Even、Mark、Space可根据需要自行配置-->  
+    <bit>None</bit>  
+    <bit>Odd</bit>  
+    <bit>Even</bit>  
+    <bit>Mark</bit>  
+    <bit>Space</bit> 
+  </db>  
+  <db> 
+    <type>Stream</type>  
+    <!-- 流控制：分别为None、Hard_IN、Hard_OUT、Soft_IN、Soft_OUT可根据需要自行配置-->  
+    <bit>None</bit>  
+    <bit>Hard_IN</bit>  
+    <bit>Hard_OUT</bit>  
+    <bit>Soft_IN</bit>  
+    <bit>Soft_OUT</bit> 
+  </db>  
+  <db> 
+    <type>msg</type>  
+    <!-- 初始化发送文本信息 -->  
+    <message>sdsssssd</message> 
+  </db> 
+</hotel-config>
