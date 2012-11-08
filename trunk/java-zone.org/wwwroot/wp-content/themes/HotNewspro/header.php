@@ -90,8 +90,7 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 	<div id="header">
 		<div class="header_c">
 			<?php if (get_option('swt_logo') == 'Hide') { ?>
-			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?>&trade;</a><br/><span  class="blog-title"><?php bloginfo('description'); ?></span ></h1>
-<span title="加入该QQ群" style="color:red">Java/Linux交流QQ群：5397211</span>
+			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?><!--&trade;--></a><br/><span  class="blog-title"><?php bloginfo('description'); ?></span ></h1>
 			<?php { echo ''; } ?>
 			<?php } else { include(TEMPLATEPATH . '/includes/logo.php'); } ?>
 			<div class="login_t"><?php include('includes/login.php'); ?></div>

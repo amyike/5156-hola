@@ -24,8 +24,13 @@
 	<a target="_blank" href="http://www.miibeian.gov.cn" rel="external nofollow">浙ICP备12040790号</a>
 	&nbsp;&nbsp;基于<a target="_blank" href="http://wordpress.org/" title="WordPress.org" rel="external nofollow"> WordPress</a> 技术创建
 	&nbsp;&nbsp;Theme by <a target="_blank" href="http://zmingcx.com" rel="external nofollow">Robin</a>
-	&nbsp;&nbsp;<a href="<?php bloginfo('home'); ?>/sitemap_baidu.xml" target="_blank">百度地图</a> 
+	&nbsp;&nbsp;
+	<a href="<?php bloginfo('home'); ?>/sitemap_baidu.xml" target="_blank">百度地图</a> 
 	<a href="<?php bloginfo('home'); ?>/sitemap.xml" target="_blank">谷歌地图</a>
+	<span aligin="center">
+		<br>本站为个人站点，部分内容摘自网络，仅供学习交流之用，将不对任何资源负法律责任。<br>
+		如有侵犯您的版权，请及时联系我(<a href="mailto:kaliry@126.com">kaliry@126.com</a>)，本人会尽快处理。
+	</span>
 	&nbsp;&nbsp;<?php echo stripslashes(get_option('swt_track_code')); ?>
 	<big class="lb"></big>
 	<big class="rb"></big>
@@ -54,8 +59,13 @@
 	&nbsp;&nbsp;基于<a target="_blank" href="http://wordpress.org/" title="WordPress.org" rel="external nofollow"> WordPress</a> 技术创建
 	&nbsp;&nbsp;Theme by <a target="_blank" href="http://zmingcx.com" rel="external nofollow">Robin</a>
 	&nbsp;&nbsp;<?php echo get_num_queries(); ?>次查询
-	&nbsp;&nbsp;<a href="<?php bloginfo('home'); ?>/sitemap_baidu.xml" target="_blank">百度地图</a> 
+	&nbsp;&nbsp;
+	<a href="<?php bloginfo('home'); ?>/sitemap_baidu.xml" target="_blank">百度地图</a> 
 	<a href="<?php bloginfo('home'); ?>/sitemap.xml" target="_blank">谷歌地图</a>
+	<span aligin="center">
+		<br>本站为个人站点，部分内容摘自网络，仅供学习交流之用，将不对任何资源负法律责任。<br>
+		如有侵犯您的版权，请及时联系我(<a href="mailto:kaliry@126.com">kaliry@126.com</a>)，本人会尽快处理。
+	</span>
 	&nbsp;&nbsp;<?php echo stripslashes(get_option('swt_track_code')); ?>
 </div>
 <?php } ?>
