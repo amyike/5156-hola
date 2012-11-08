@@ -1,0 +1,13 @@
+#
+# robots.txt for java-zone.org
+# Version 1.0.0
+#
+
+#User-agent:Mediapartners-Google
+#Disallow:
+
+User-agent: *
+Allow: /
+
+Sitemap: http://www.java-zone.org/sitemap.xml
+Sitemap: http://www.java-zone.org/sitemap_baidu.xml
