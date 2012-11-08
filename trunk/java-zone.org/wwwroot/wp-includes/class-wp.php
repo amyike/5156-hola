@@ -139,14 +139,12 @@ class WP {
 			$this->did_permalink = true;
 
 			if ( isset($_SERVER['PATH_INFO']) )
-				//$pathinfo = $_SERVER['PATH_INFO'];
-				$pathinfo = mb_convert_encoding($_SERVER['PATH_INFO'], "UTF-8", "GBK");
+				$pathinfo = $_SERVER['PATH_INFO'];
 			else
 				$pathinfo = '';
 			$pathinfo_array = explode('?', $pathinfo);
 			$pathinfo = str_replace("%", "%25", $pathinfo_array[0]);
-			//$req_uri = $_SERVER['REQUEST_URI'];
-			$req_uri = mb_convert_encoding($_SERVER['REQUEST_URI'], "UTF-8", "GBK");
+			$req_uri = $_SERVER['REQUEST_URI'];
 			$req_uri_array = explode('?', $req_uri);
 			$req_uri = $req_uri_array[0];
 			$self = $_SERVER['PHP_SELF'];
