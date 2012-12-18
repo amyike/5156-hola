@@ -107,7 +107,7 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 				$header_image = get_header_image();
 				if ( ! empty( $header_image ) ) :
 			?>
-				<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+				<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="Java地带-Banner" />
 			<?php endif;?>
 		</div>
 		<!-- end:header_image -->
