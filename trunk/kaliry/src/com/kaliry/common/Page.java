@@ -66,8 +66,8 @@ public class Page<T> {
 		}
 		this.pageIndex = pageIndex;
 		this.first = (pageIndex - 1) * this.pageSize;
-		if (this.first > 0)
-			this.first--;
+//		if (this.first > 0)
+//			this.first--;
 
 		pageString = params == null ? createPageBar(url, viewedNum,
 				paramsString) : createPageBar(url, viewedNum, params);
