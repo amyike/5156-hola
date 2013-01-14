@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+.img_max_width_400{max-width:400px;}
+.img_max_height_400{max-height:400px;}
+.img_float_left{float:left;}
+
+.input_w300{width:300px;}
+
+.table_td_p5 td{padding:5px;}
+
+.js_msg{color:#F00;}
+
+.warning{color:#F00;}
