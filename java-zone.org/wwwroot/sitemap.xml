@@ -1,17 +1,491 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://www.java-zone.org/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.4.1" -->
-<!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.8" -->
-<!-- generated-on="2012 年 11 月 8 日 07:43" -->
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://www.java-zone.org/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.5" -->
+<!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.9" -->
+<!-- generated-on="2013 年 1 月 15 日 07:40" -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://www.java-zone.org/</loc>
-		<lastmod>2012-11-08T07:43:09+00:00</lastmod>
+		<lastmod>2013-01-15T07:40:27+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/1277.html</loc>
+		<lastmod>2013-01-15T07:40:27+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1274.html</loc>
+		<lastmod>2013-01-15T07:23:21+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1270.html</loc>
+		<lastmod>2013-01-15T06:25:47+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1267.html</loc>
+		<lastmod>2013-01-15T06:02:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/about</loc>
-		<lastmod>2012-11-08T07:43:09+00:00</lastmod>
+		<lastmod>2013-01-15T05:43:58+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1255.html</loc>
+		<lastmod>2013-01-15T05:31:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1262.html</loc>
+		<lastmod>2013-01-15T05:29:22+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/more</loc>
+		<lastmod>2013-01-15T03:36:39+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1253.html</loc>
+		<lastmod>2013-01-10T08:39:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1251.html</loc>
+		<lastmod>2013-01-10T08:30:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1244.html</loc>
+		<lastmod>2012-12-29T06:38:56+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1242.html</loc>
+		<lastmod>2012-12-28T06:20:21+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1235.html</loc>
+		<lastmod>2012-12-22T17:14:15+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1231.html</loc>
+		<lastmod>2012-12-21T02:43:33+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1227.html</loc>
+		<lastmod>2012-12-20T01:29:01+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1223.html</loc>
+		<lastmod>2012-12-19T14:22:15+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1221.html</loc>
+		<lastmod>2012-12-19T03:02:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1219.html</loc>
+		<lastmod>2012-12-19T02:59:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1217.html</loc>
+		<lastmod>2012-12-19T02:57:29+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1213.html</loc>
+		<lastmod>2012-12-18T03:10:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/402.html</loc>
+		<lastmod>2012-12-17T06:14:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/913.html</loc>
+		<lastmod>2012-12-17T06:14:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1209.html</loc>
+		<lastmod>2012-12-17T06:13:51+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1205.html</loc>
+		<lastmod>2012-12-13T09:12:33+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1203.html</loc>
+		<lastmod>2012-12-11T01:44:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1201.html</loc>
+		<lastmod>2012-12-07T09:39:32+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1095.html</loc>
+		<lastmod>2012-12-06T08:02:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1196.html</loc>
+		<lastmod>2012-12-04T06:11:55+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1194.html</loc>
+		<lastmod>2012-11-29T13:36:31+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1182.html</loc>
+		<lastmod>2012-11-27T11:44:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1190.html</loc>
+		<lastmod>2012-11-27T01:32:23+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1187.html</loc>
+		<lastmod>2012-11-27T01:27:55+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1185.html</loc>
+		<lastmod>2012-11-27T01:06:10+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1179.html</loc>
+		<lastmod>2012-11-23T14:37:59+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1177.html</loc>
+		<lastmod>2012-11-23T11:57:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1175.html</loc>
+		<lastmod>2012-11-23T09:19:47+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1172.html</loc>
+		<lastmod>2012-11-23T09:17:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1170.html</loc>
+		<lastmod>2012-11-23T09:16:04+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1168.html</loc>
+		<lastmod>2012-11-23T09:14:38+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1166.html</loc>
+		<lastmod>2012-11-23T09:10:33+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1163.html</loc>
+		<lastmod>2012-11-23T08:44:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1161.html</loc>
+		<lastmod>2012-11-22T09:10:21+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1159.html</loc>
+		<lastmod>2012-11-22T09:08:09+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1157.html</loc>
+		<lastmod>2012-11-22T09:04:30+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1155.html</loc>
+		<lastmod>2012-11-22T09:01:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1153.html</loc>
+		<lastmod>2012-11-22T08:55:51+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1151.html</loc>
+		<lastmod>2012-11-22T08:54:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1148.html</loc>
+		<lastmod>2012-11-22T08:38:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1145.html</loc>
+		<lastmod>2012-11-22T02:22:52+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1143.html</loc>
+		<lastmod>2012-11-21T08:43:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1139.html</loc>
+		<lastmod>2012-11-21T08:41:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1137.html</loc>
+		<lastmod>2012-11-21T08:32:04+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1135.html</loc>
+		<lastmod>2012-11-21T08:30:15+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1133.html</loc>
+		<lastmod>2012-11-21T08:14:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1130.html</loc>
+		<lastmod>2012-11-21T08:11:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1128.html</loc>
+		<lastmod>2012-11-21T08:08:55+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1124.html</loc>
+		<lastmod>2012-11-21T08:06:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1121.html</loc>
+		<lastmod>2012-11-21T08:03:51+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1118.html</loc>
+		<lastmod>2012-11-21T08:01:33+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1116.html</loc>
+		<lastmod>2012-11-21T07:59:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1114.html</loc>
+		<lastmod>2012-11-21T07:56:13+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1111.html</loc>
+		<lastmod>2012-11-21T07:52:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1108.html</loc>
+		<lastmod>2012-11-21T07:46:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1105.html</loc>
+		<lastmod>2012-11-21T06:10:21+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1102.html</loc>
+		<lastmod>2012-11-20T04:01:31+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1100.html</loc>
+		<lastmod>2012-11-19T06:55:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1092.html</loc>
+		<lastmod>2012-11-19T01:37:36+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1090.html</loc>
+		<lastmod>2012-11-14T09:41:47+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1088.html</loc>
+		<lastmod>2012-11-14T09:38:34+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1086.html</loc>
+		<lastmod>2012-11-14T09:36:37+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1083.html</loc>
+		<lastmod>2012-11-14T09:27:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1079.html</loc>
+		<lastmod>2012-11-14T07:01:29+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1077.html</loc>
+		<lastmod>2012-11-13T07:50:02+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1075.html</loc>
+		<lastmod>2012-11-13T07:48:09+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1070.html</loc>
+		<lastmod>2012-11-12T08:26:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1066.html</loc>
+		<lastmod>2012-11-12T03:31:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1061.html</loc>
+		<lastmod>2012-11-09T09:58:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1056.html</loc>
+		<lastmod>2012-11-09T09:52:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1054.html</loc>
+		<lastmod>2012-11-09T09:46:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/1052.html</loc>
+		<lastmod>2012-11-09T09:44:34+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/1037.html</loc>
@@ -98,12 +572,6 @@
 		<priority>0.2</priority>
 	</url>
 	<url>
-		<loc>http://www.java-zone.org/913.html</loc>
-		<lastmod>2012-11-03T09:55:50+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
 		<loc>http://www.java-zone.org/988.html</loc>
 		<lastmod>2012-11-03T06:50:43+00:00</lastmod>
 		<changefreq>monthly</changefreq>
@@ -118,12 +586,6 @@
 	<url>
 		<loc>http://www.java-zone.org/975.html</loc>
 		<lastmod>2012-11-03T06:22:38+00:00</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>http://www.java-zone.org/402.html</loc>
-		<lastmod>2012-11-03T04:26:59+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
@@ -1106,12 +1568,6 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://www.java-zone.org/more</loc>
-		<lastmod>2012-05-23T03:10:12+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
-	</url>
-	<url>
 		<loc>http://www.java-zone.org/426.html</loc>
 		<lastmod>2012-05-22T07:10:52+00:00</lastmod>
 		<changefreq>monthly</changefreq>
@@ -1584,12 +2040,27 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/category/front-end-development/css</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/category/google-adsense</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/category/java/hibernate</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/category/front-end-development/html5</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/category/servers/iis</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -1624,12 +2095,42 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/category/development-tools/navicat</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/category/servers/nginx</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/category/it-family/php</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/category/recommend</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/category/linux/redhat</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/category/seo</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/category/servers/tomcat</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/category/vps</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -1669,19 +2170,31 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
-		<loc>http://www.java-zone.org/category/%e7%94%b5%e8%84%91%e4%bd%bf%e7%94%a8%e6%8a%80%e5%b7%a7</loc>
+		<loc>http://www.java-zone.org/category/computer-skills</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
-		<loc>http://www.java-zone.org/category/%e7%bd%91%e7%bb%9c%e8%90%a5%e9%94%80</loc>
+		<loc>http://www.java-zone.org/category/network-marketing</loc>
 		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/date/2013/01</loc>
+		<lastmod>2013-01-15T07:37:58+00:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/date/2012/12</loc>
+		<lastmod>2012-12-29T06:38:56+00:00</lastmod>
+		<changefreq>yearly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/date/2012/11</loc>
-		<lastmod>2012-11-08T03:26:24+00:00</lastmod>
-		<changefreq>daily</changefreq>
+		<lastmod>2012-11-29T13:36:31+00:00</lastmod>
+		<changefreq>yearly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
@@ -1722,7 +2235,7 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/author/kaliry</loc>
-		<lastmod>2012-11-08T03:42:23+00:00</lastmod>
+		<lastmod>2013-01-15T07:40:27+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -1777,6 +2290,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/apache-tomcat</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/api</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -1787,7 +2305,17 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/axure</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/base</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/base64%e7%bc%96%e7%a0%81</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -1827,6 +2355,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/chrome%e6%b5%8f%e8%a7%88%e5%99%a8</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/cmd%e5%91%bd%e4%bb%a4</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -1853,6 +2386,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/cookies</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/cookie%e6%93%8d%e4%bd%9c</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -1922,6 +2460,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/div%e9%80%8f%e6%98%8e%e6%95%88%e6%9e%9c</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/dns</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -1942,7 +2485,17 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/dom%e5%85%83%e7%b4%a0</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/eclipse</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/eclipse-64%e4%bd%8d</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -1993,6 +2546,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/firefox</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/firefox%e6%b5%8f%e8%a7%88%e5%99%a8</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2117,6 +2675,16 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/hibernate%e6%9d%a1%e4%bb%b6%e6%9f%a5%e8%af%a2</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/hibernate%e6%a1%86%e6%9e%b6</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/hmtl</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -2132,12 +2700,22 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/html5%e5%bc%80%e5%8f%91</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/html5%e7%9a%84websocket</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/html%e4%b8%ad%e8%b6%85%e9%93%be%e6%8e%a5a%e6%a0%87%e7%ad%be</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/html%e5%bc%80%e5%8f%91</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2157,12 +2735,27 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/ie%e6%b5%8f%e8%a7%88%e5%99%a8</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/ie%e8%87%aa%e5%ae%9a%e4%b9%89%e5%85%83%e7%b4%a0</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/ifnull</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/iis</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/imap</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2178,6 +2771,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/isnull</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/iterator</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2277,6 +2875,16 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/javascript%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/javascript%e7%bc%96%e7%a8%8b</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/javascript%e8%8e%b7%e5%8f%96url%e5%8f%82%e6%95%b0</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -2342,7 +2950,37 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/java%e4%bc%aa%e9%9d%99%e6%80%81</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/java%e5%86%85%e5%ad%98%e4%bc%98%e5%8c%96</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/java%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/java%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/java%e5%8e%8b%e7%bc%a9%e4%b8%8e%e8%a7%a3%e5%8e%8b</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/java%e5%8f%8d%e5%b0%84</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/java%e5%8f%8d%e7%bc%96%e8%af%91</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2382,6 +3020,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/java%e5%ad%97%e7%ac%a6%e4%b8%b2</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/java%e5%ae%89%e5%85%a8</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -2407,6 +3050,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/java%e5%bc%80%e6%ba%90%e6%a1%86%e6%9e%b6%e5%a4%a7%e5%85%a8</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/java%e5%bc%82%e5%b8%b8</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -2427,7 +3075,27 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/java%e6%93%8d%e4%bd%9ccsv</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/java%e6%93%8d%e4%bd%9cexcel</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/java%e6%93%8d%e4%bd%9czip</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/java%e6%95%b0%e6%8d%ae%e5%85%b1%e4%ba%ab</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/java%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2458,6 +3126,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/java%e6%96%87%e4%bb%b6%e4%b8%8b%e8%bd%bd%e5%8a%9f%e8%83%bd</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/java%e6%96%87%e4%bb%b6%e6%93%8d%e4%bd%9c</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2493,6 +3166,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/java%e6%b8%b8%e6%88%8f</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/java%e6%ba%90%e6%96%87%e4%bb%b6</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2562,6 +3240,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/java%e7%bc%96%e7%a0%81%e4%bc%98%e5%8c%96</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/java%e7%bc%96%e7%a8%8b</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -2602,6 +3285,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/java%e8%99%9a%e6%8b%9f%e4%b8%bb%e6%9c%ba</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/java%e8%ae%be%e7%bd%ae%e4%b8%8e%e8%af%bb%e5%8f%96cookie%e5%b1%9e%e6%80%a7</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -2617,7 +3305,17 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/java%e8%af%ad%e8%a8%80%e7%bc%96%e7%a8%8b</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/java%e8%b0%83%e7%94%a8cmd%e5%91%bd%e4%bb%a4</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/java%e8%b0%83%e7%94%a8dos</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2697,6 +3395,16 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/jpa</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/jpa%e6%b3%a8%e8%a7%a3</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/jquery</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -2722,12 +3430,27 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/jquery%e5%ad%a6%e4%b9%a0</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/jquery%e6%8a%80%e5%b7%a7</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/jquery%e9%80%89%e6%8b%a9%e5%99%a8</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/js</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/json%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2773,6 +3496,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/jsp%e4%b9%9d%e5%a4%a7%e9%9a%90%e5%90%ab%e5%af%b9%e8%b1%a1</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/jsp%e4%bc%aa%e9%9d%99%e6%80%81</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2842,7 +3570,27 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/js%e4%bd%bf%e7%94%a8%e6%8a%80%e5%b7%a7</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/js%e6%93%8d%e4%bd%9ccookie</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/js%e6%97%b6%e9%97%b4%e6%8e%a7%e4%bb%b6</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/js%e6%9c%ac%e5%9c%b0%e6%96%87%e4%bb%b6%e6%93%8d%e4%bd%9c</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/js%e8%af%bb%e5%86%99txt%e6%96%87%e4%bb%b6</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2892,6 +3640,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/linux%e5%91%bd%e4%bb%a4</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/linux%e5%bc%80%e6%9c%ba%e5%90%af%e5%8a%a8%e9%a1%b9</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -2923,6 +3676,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/list</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/listiterator</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -2977,6 +3735,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/mime%e9%82%ae%e4%bb%b6%e6%a0%bc%e5%bc%8f</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/mozilla</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -2997,6 +3760,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/myeclipse9-x%e6%b3%a8%e5%86%8c%e7%a0%81</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/mylyn</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -3012,7 +3780,17 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/mysql%e6%95%b0%e6%8d%ae%e5%ba%93%e4%bc%98%e5%8c%96</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/mysql%e6%95%b0%e6%8d%ae%e5%ba%93%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/mysql%e7%b4%a2%e5%bc%95</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -3047,12 +3825,27 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/openvz</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/pdm</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/php</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/php%e6%9c%8d%e5%8a%a1%e5%99%a8</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/php%e9%85%8d%e7%bd%ae</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -3272,6 +4065,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/smtp</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/socket</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -3323,6 +4121,16 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/springmvc%e6%b3%a8%e8%a7%a3</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/spring%e4%ba%8b%e5%8a%a1</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/spring%e6%a1%86%e6%9e%b6</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -3402,6 +4210,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/timestamp%e7%b1%bb%e5%9e%8b</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/tinyint%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -3472,6 +4285,16 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/vmware</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/vps</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/wait%e6%96%b9%e6%b3%95</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -3532,6 +4355,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/windows7-64%e4%bd%8d</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/windows8</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -3552,7 +4380,22 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/wordpress%e4%bc%98%e5%8c%96</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/wordpress%e4%bc%aa%e9%9d%99%e6%80%81</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/wordpress%e5%ae%89%e8%a3%85</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/wordpress%e6%8a%80%e5%b7%a7</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -3563,6 +4406,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/x-pingback</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/xen</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -3747,6 +4595,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/%e5%86%92%e6%b3%a1%e6%8e%92%e5%ba%8f%e7%ae%97%e6%b3%95</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/%e5%87%a4%e5%b7%a2%e7%b3%bb%e7%bb%9f</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -3758,6 +4611,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/%e5%87%bd%e6%95%b0</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/%e5%88%87%e9%9d%a2%e7%bc%96%e7%a8%8b</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -3837,6 +4695,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/%e5%8e%9f%e7%94%9fjs</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/%e5%8f%82%e6%95%b0</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -3848,6 +4711,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/%e5%8f%8d%e5%ba%8f%e5%88%97%e5%8c%96</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/%e5%8f%98%e9%87%8f%e5%90%8d%e5%91%bd%e5%90%8d%e8%a7%84%e5%88%99</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -3883,6 +4751,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/%e5%9b%be%e5%83%8f%e5%9c%b0%e5%9b%be</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/%e5%9c%a8%e7%ba%bf%e5%b7%a5%e5%85%b7</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -4032,6 +4905,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/%e5%ba%8f%e5%88%97%e5%8f%b7</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/%e5%ba%94%e7%94%a8</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -4152,6 +5030,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/%e6%8e%92%e5%ba%8f%e7%ae%97%e6%b3%95</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/%e6%8e%a5%e5%8f%a3</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -4163,6 +5046,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/%e6%8f%92%e5%85%a5</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/%e6%8f%92%e5%85%a5%e6%8e%92%e5%ba%8f%e7%ae%97%e6%b3%95</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -4183,6 +5071,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/database</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/%e6%95%b0%e6%8d%ae%e5%ba%93%e4%ba%8b%e5%8a%a1</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -4223,6 +5116,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/%e6%96%87%e4%bb%b6%e4%b8%8a%e4%bc%a0</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/%e6%96%b0%e6%b5%aasae</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -4347,6 +5245,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/%e6%af%94%e8%be%83</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -4363,6 +5266,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/%e6%b3%a8%e5%86%8c</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/%e6%b3%a8%e5%86%8c%e7%a0%81</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -4407,7 +5315,7 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
-		<loc>http://www.java-zone.org/tag/%e7%94%b5%e8%84%91%e4%bd%bf%e7%94%a8%e6%8a%80%e5%b7%a7</loc>
+		<loc>http://www.java-zone.org/tag/computer-skills</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -4552,6 +5460,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/%e7%bc%96%e8%be%91%e5%99%a8</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -4587,7 +5500,7 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
-		<loc>http://www.java-zone.org/tag/%e7%bd%91%e7%bb%9c%e8%90%a5%e9%94%80</loc>
+		<loc>http://www.java-zone.org/tag/network-marketing</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
@@ -4662,6 +5575,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/%e8%a1%a8%e5%8d%95%e9%aa%8c%e8%af%81</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/%e8%a1%a8%e7%9a%84%e6%95%b0%e6%8d%ae</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -4707,6 +5625,11 @@
 		<priority>0.3</priority>
 	</url>
 	<url>
+		<loc>http://www.java-zone.org/tag/%e8%b0%b7%e6%ad%8cgae</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
 		<loc>http://www.java-zone.org/tag/%e8%b7%af%e5%be%84</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
@@ -4738,6 +5661,11 @@
 	</url>
 	<url>
 		<loc>http://www.java-zone.org/tag/%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.3</priority>
+	</url>
+	<url>
+		<loc>http://www.java-zone.org/tag/%e9%82%ae%e4%bb%b6%e6%9c%8d%e5%8a%a1%e5%99%a8</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.3</priority>
 	</url>
