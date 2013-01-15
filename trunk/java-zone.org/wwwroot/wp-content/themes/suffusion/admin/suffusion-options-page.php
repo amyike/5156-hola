@@ -272,7 +272,6 @@ function suffusion_admin_script_loader() {
 	wp_enqueue_script('jquery-ui-draggable');
 	wp_enqueue_script('jquery-ui-tabs');
 	wp_enqueue_script('suggest');
-	wp_enqueue_script('wp-pointer');
 	wp_enqueue_script('suffusion-jquery-jscolor', get_template_directory_uri().'/admin/js/jscolor/jscolor.js', array('jquery'));
 
 	if ($wp_version >= 3.1 && $wp_version < 3.2) {
@@ -300,11 +299,9 @@ function suffusion_admin_script_loader() {
 		'category' => $category,
 	);
 	wp_localize_script('suffusion-admin', 'Suffusion_Admin_JS', $js_array);
-	add_action('admin_print_footer_scripts', 'suffusion_admin_footer_scripts');
 }
 
 function suffusion_admin_style_loader() {
-	wp_enqueue_style('wp-pointer');
 	wp_enqueue_style('suffusion-admin-jq', get_template_directory_uri().'/admin/js/jquery-ui/css/jquery-ui-1.7.3.custom.css', array(), SUFFUSION_THEME_VERSION);
 	wp_enqueue_style('suffusion-admin', get_template_directory_uri().'/admin/admin.css', array('suffusion-admin-jq'), SUFFUSION_THEME_VERSION);
 }
@@ -586,35 +583,3 @@ function suffusion_search_array_to_json($array) {
 
 	return $result;
 }
-
-function suffusion_admin_footer_scripts() {
-	global $suffusion_pointers;
-	$dismissed_pointers = explode(',', get_user_meta(get_current_user_id(), 'dismissed_wp_pointers', true));
-	$ret = "";
-	foreach ($suffusion_pointers as $pointer => $contents) {
-		if (in_array($pointer, $dismissed_pointers)) {
-			continue;
-		}
-		$ret .= "\$j('".esc_attr($contents['selector'])."').pointer({\n";
-		$ret .= "\tcontent: \$j('<div/>').html('".esc_attr($contents['content'])."').text(),\n";
-		$ret .= "\tposition: \$j('<div/>').html('".esc_attr($contents['position'])."').text(),\n";
-		$ret .= "\tclose: function() { \$j.post( ajaxurl, { pointer: \$j('<div/>').html('".esc_attr($pointer)."').text(), action: 'dismiss-wp-pointer' }); }\n";
-		$ret .= "}).pointer('open');\n";
-	}
-	if ($ret != "") {
-?>
-	<script type="text/javascript">
-	//<![CDATA[
-	$j = jQuery.noConflict();
-
-	$j(document).ready(function() {
-		if ($j.isFunction($j.fn.pointer)) {
-			<?php echo $ret; ?>
-		}
-	});
-	//]]>
-	</script>
-<?php
-	}
-}
-?>

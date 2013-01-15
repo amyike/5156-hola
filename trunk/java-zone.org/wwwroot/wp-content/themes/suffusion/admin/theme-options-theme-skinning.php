@@ -79,7 +79,7 @@ $suffusion_theme_skinning_options = array(
 		"id" => "suf_little_icons_enabled",
 		"parent" => "icon-sets",
 		"type" => "multi-select",
-		"options" => suffusion_get_formatted_options_array("suf_little_icons_enabled",
+		"options" => suffusion_get_formatted_options_array(
 			array(
 				'author' => 'Post/page author',
 				'date' => 'Post/page date',
@@ -630,9 +630,12 @@ $suffusion_theme_skinning_options = array(
 		"type" => "sub-section-3",),
 
 	array("name" => "Default or custom backgrounds for main body?",
-		"desc" => "<b> If you are using WP's native background features, this section will be completely ignored.</b> You can decide to go with the colors / text styles of the theme you are using, or choose your own. " .
-				"If you choose default colors / text styles here then the rest of your settings in this section will be ignored. " .
-				"If you choose custom styles then the settings you make here will override the theme's settings.",
+		"desc" => "<b>If you are using WP's native background features:</b>
+			<ul class='margin-20'>
+				<li>If <em>Appearance &rarr; Background</em> has a background image, that image will be shown as your site's background (no change in this behaviour).</li>
+				<li>If <em>Appearance &rarr; Background</em> has no background image, there will be no background image for your site.</li>
+				<li>If <em>Appearance &rarr; Background</em> has the default background image, only then will the settings from this page will take effect. If you have left this section to have &ldquo;Theme Styles&rdquo;, then everything will stay as default.</li>
+			</ul>",
 		"id" => "suf_body_style_setting",
 		"parent" => "body-bg-settings",
 		"note" => "Please set this option to \"Custom styles\" if you want to override the theme's settings for the body.",
@@ -657,7 +660,7 @@ $suffusion_theme_skinning_options = array(
 		"parent" => "body-bg-settings",
 		"type" => "upload",
 		"hint" => "Enter the full URL here (including http://), or click on \"Upload Image\"",
-		"std" => ""),
+		"std" => suffusion_evaluate_style("suf_body_background_image", $suffusion_theme_name)),
 
 	array("name" => "Body Background Image Tiling",
 		"desc" => "Set how the background image should be tiled. This will define how the image will repeat on the background. " .

@@ -71,7 +71,7 @@ function suffusion_get_allowed_categories($prefix) {
 		if ($selected && trim($selected) != '') { $selected_categories = explode(',', $selected); } else { $selected_categories = array(); }
 		if ($selected_categories && is_array($selected_categories)) {
 			foreach ($selected_categories as $category) {
-				$allowed[count($allowed)] = get_category($category);
+				$allowed[] = get_category($category);
 			}
 		}
 	}
@@ -88,7 +88,7 @@ function suffusion_get_allowed_pages($prefix) {
 			if (is_array($selected_pages) && count($selected_pages) > 0) {
 				foreach ($selected_pages as $page_id) {
 					$page = get_page($page_id);
-					$allowed[count($allowed)] = $page;
+					$allowed[] = $page;
 				}
 			}
 		}
@@ -196,8 +196,14 @@ function suffusion_enqueue_styles() {
 	}
 
 	// BP admin-bar, loaded only if this is a BP installation
-	if (function_exists('bp_is_group')) {
-		wp_enqueue_style('bp-admin-bar', apply_filters('bp_core_admin_bar_css', WP_PLUGIN_URL.'/buddypress/bp-themes/bp-default/_inc/css/adminbar.css'));
+	if (defined('BP_VERSION')) {
+		if (substr(BP_VERSION, 0, 3) == '1.6') {
+			$stylesheet = WP_PLUGIN_URL.'/buddypress/bp-core/css/buddybar.css';
+		}
+		else {
+			$stylesheet = WP_PLUGIN_URL.'/buddypress/bp-themes/bp-default/_inc/css/adminbar.css';
+		}
+		wp_enqueue_style('bp-admin-bar', apply_filters('bp_core_admin_bar_css', $stylesheet), array(), BP_VERSION);
 	}
 
 	// IE-specific CSS, loaded if the browser is IE < 8
@@ -240,7 +246,7 @@ function suffusion_print_direct_styles() {
 ?>
 	<!-- CSS styles constructed using option definitions -->
 	<style type="text/css">
-	<!--/*--><![CDATA[/*><!--*/
+	/* <![CDATA[ */
 <?php
 		if ($suf_autogen_css == 'nogen') {
 			$suffusion_custom_css_string = suffusion_generate_all_custom_styles();
@@ -261,7 +267,7 @@ function suffusion_print_direct_styles() {
 			echo "#wrapper #nav {float: left;}\n";
 		}
 	?>
-	/*]]>*/-->
+	/* ]]> */
 	</style>
 <?php
 	}
@@ -269,22 +275,22 @@ function suffusion_print_direct_styles() {
 		?>
 <!-- CSS styles constructed using option definitions -->
 <style type="text/css">
-<!--/*--><![CDATA[/*><!--*/
+/* <![CDATA[ */
 #wrapper #nav {float: left;}
-/*]]>*/-->
+/* ]]> */
 </style>
 	<?php
 	}
 	if (isset($suf_custom_css_code) && trim($suf_custom_css_code) != "") { ?>
 		<!-- Custom CSS styles defined in options -->
 		<style type="text/css">
-			<!--/*--><![CDATA[/*><!--*/
+			/* <![CDATA[ */
 <?php
 	$strip = stripslashes($suf_custom_css_code);
 	$strip = wp_specialchars_decode($strip, ENT_QUOTES);
 	echo $strip;
 ?>
-			/*]]>*/-->
+			/* ]]> */
 		</style>
 		<!-- /Custom CSS styles defined in options -->
 <?php
@@ -296,11 +302,11 @@ function suffusion_print_direct_styles() {
 			$header_bg_url = " url(".suffusion_get_rotating_image($suf_header_background_rot_folder).") "; ?>
 		<!-- Custom CSS styles defined in options -->
 <style type="text/css">
-	<!--/*--><![CDATA[/*><!--*/
+	/* <![CDATA[ */
 <?php
 			echo "#header-container { background-image: $header_bg_url; }\n";
 				?>
-	/*]]>*/-->
+	/* ]]> */
 </style>
 <!-- /Custom CSS styles defined in options -->
 <?php
@@ -512,7 +518,7 @@ function suffusion_get_excluded_pages($prefix) {
         $include = explode(',', $inclusions);
         $translations = suffusion_get_wpml_lang_object_ids($include, 'post');
         foreach ($translations as $translation) {
-            $include[count($include)] = $translation;
+            $include[] = $translation;
         }
     }
     else {
@@ -523,7 +529,7 @@ function suffusion_get_excluded_pages($prefix) {
 	$exclude = array();
 	foreach ($all_pages as $page) {
 		if (!in_array($page, $include)) {
-            $exclude[count($exclude)] = $page;
+            $exclude[] = $page;
         }
 	}
 	// Now we need to figure out if these excluded pages are ancestors of any pages on the list. If so, we remove the descendants
@@ -531,7 +537,7 @@ function suffusion_get_excluded_pages($prefix) {
 		$ancestors = get_ancestors($page, 'page');
 		foreach ($ancestors as $ancestor) {
 			if (in_array($ancestor, $exclude)) {
-				$exclude[count($exclude)] = $page;
+				$exclude[] = $page;
 			}
 		}
 	}
@@ -852,7 +858,12 @@ function suffusion_cpt_tile_taxonomies($post_id, $ret_trailer = '') {
  * @param string $after
  */
 function suffusion_cpt_line_taxonomies($post_id, $is_single_cpt = false, $before = '', $after = '') {
-	global $post, $suffusion_cpt_layouts;
+	global $post, $suffusion_cpt_layouts, $suf_byline_before_after_cpt_taxonomies;
+
+	if (isset($suf_byline_before_after_cpt_taxonomies)) {
+		$suffusion_byline_before_after_cpt_taxonomies = suffusion_get_associative_array($suf_byline_before_after_cpt_taxonomies);
+	}
+
 	if (!$is_single_cpt) {
 		$taxonomies = suffusion_get_post_meta($post_id, 'suf_cpt_byline_taxonomies', true);
 		if ($taxonomies) {
@@ -874,7 +885,18 @@ function suffusion_cpt_line_taxonomies($post_id, $is_single_cpt = false, $before
 			if (strlen(trim($terms)) != 0) {
 				echo $before;
 				echo "<span class='tax-{$taxonomy->name} tax'><span class='icon'>&nbsp;</span>";
-				echo $terms;
+				if (isset($suffusion_byline_before_after_cpt_taxonomies) && isset($suffusion_byline_before_after_cpt_taxonomies[$taxonomy->name])) {
+					$prepend = isset($suffusion_byline_before_after_cpt_taxonomies[$taxonomy->name]['before']) ?
+							apply_filters('suffusion_before_byline_html', do_shortcode($suffusion_byline_before_after_cpt_taxonomies[$taxonomy->name]['before']), $taxonomy->name) : '';
+					$append = isset($suffusion_byline_before_after_cpt_taxonomies[$taxonomy->name]['after']) ?
+							apply_filters('suffusion_after_byline_html', do_shortcode($suffusion_byline_before_after_cpt_taxonomies[$taxonomy->name]['after']), $taxonomy->name) : '';
+				}
+				else {
+					$prepend = '';
+					$append = '';
+				}
+
+				echo $prepend.$terms.$append;
 				echo "</span>";
 				echo $after;
 			}
