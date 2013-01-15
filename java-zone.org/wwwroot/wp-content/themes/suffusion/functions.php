@@ -7,7 +7,7 @@
  */
 
 if (!defined('SUFFUSION_THEME_VERSION')) {
-	define('SUFFUSION_THEME_VERSION', '4.2.2');
+	define('SUFFUSION_THEME_VERSION', '4.4.5');
 }
 
 require_once(get_template_directory().'/functions/framework.php');
@@ -45,96 +45,6 @@ function suffusion_theme_setup() {
 }
 
 /**
- * Define global variables for custom post types.
- *
- * @return void
- */
-function suffusion_set_custom_post_type_globals() {
-	global $suffusion_post_type_labels, $suffusion_post_type_args, $suffusion_post_type_supports;
-
-	if (!isset($suffusion_post_type_labels)) {
-		$suffusion_post_type_labels = array(
-			array('name' => 'name', 'type' => 'text', 'desc' => 'Name (e.g. Books)', 'std' => '', 'reqd' => true),
-			array('name' => 'singular_name', 'type' => 'text', 'desc' => 'Singular Name (e.g. Book)', 'std' => '', 'reqd' => true),
-			array('name' => 'add_new', 'type' => 'text', 'desc' => 'Text for "Add New" (e.g. Add New)', 'std' => ''),
-			array('name' => 'add_new_item', 'type' => 'text', 'desc' => 'Text for "Add New Item" (e.g. Add New Book)', 'std' => ''),
-			array('name' => 'edit_item', 'type' => 'text', 'desc' => 'Text for "Edit Item" (e.g. Edit Book)', 'std' => ''),
-			array('name' => 'new_item', 'type' => 'text', 'desc' => 'Text for "New Item" (e.g. New Book)', 'std' => ''),
-			array('name' => 'view_item', 'type' => 'text', 'desc' => 'Text for "View Item" (e.g. View Book)', 'std' => ''),
-			array('name' => 'search_items', 'type' => 'text', 'desc' => 'Text for "Search Items" (e.g. Search Books)', 'std' => ''),
-			array('name' => 'not_found', 'type' => 'text', 'desc' => 'Text for "Not found" (e.g. No Books Found)', 'std' => ''),
-			array('name' => 'not_found_in_trash', 'type' => 'text', 'desc' => 'Text for "Not found in Trash" (e.g. No Books Found in Trash)', 'std' => ''),
-			array('name' => 'parent_item_colon', 'type' => 'text', 'desc' => 'Parent Text with a colon (e.g. Book Series:)', 'std' => ''),
-		);
-	}
-
-	if (!isset($suffusion_post_type_args)) {
-		$suffusion_post_type_args = array(
-			array('name' => 'public', 'desc' => 'Public', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'publicly_queryable', 'desc' => 'Publicly Queriable', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'show_ui', 'desc' => 'Show UI', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'query_var', 'desc' => 'Query Variable', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'rewrite', 'desc' => 'Rewrite', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'hierarchical', 'desc' => 'Hierarchical', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'has_archive', 'desc' => 'Archives allowed', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'exclude_from_search', 'desc' => 'Exclude from Search', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'show_in_nav_menus', 'desc' => 'Show in Navigation menus', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'menu_position', 'desc' => 'Menu Position', 'type' => 'text', 'default' => null),
-		);
-	}
-
-	if (!isset($suffusion_post_type_supports)) {
-		$suffusion_post_type_supports = array(
-			array('name' => 'title', 'desc' => 'Title', 'type' => 'checkbox', 'default' => false),
-			array('name' => 'editor', 'desc' => 'Editor', 'type' => 'checkbox', 'default' => false),
-			array('name' => 'author', 'desc' => 'Author', 'type' => 'checkbox', 'default' => false),
-			array('name' => 'thumbnail', 'desc' => 'Thumbnail', 'type' => 'checkbox', 'default' => false),
-			array('name' => 'excerpt', 'desc' => 'Excerpt', 'type' => 'checkbox', 'default' => false),
-			array('name' => 'trackbacks', 'desc' => 'Trackbacks', 'type' => 'checkbox', 'default' => false),
-			array('name' => 'custom-fields', 'desc' => 'Custom Fields', 'type' => 'checkbox', 'default' => false),
-			array('name' => 'comments', 'desc' => 'Comments', 'type' => 'checkbox', 'default' => false),
-			array('name' => 'revisions', 'desc' => 'Revisions', 'type' => 'checkbox', 'default' => false),
-			array('name' => 'page-attributes', 'desc' => 'Page Attributes', 'type' => 'checkbox', 'default' => false),
-		);
-	}
-}
-
-/**
- * Define global variables for custom taxonomy setup.
- * 
- * @return void
- */
-function suffusion_set_custom_taxonomy_globals() {
-	global $suffusion_taxonomy_labels, $suffusion_taxonomy_args;
-
-	if (!isset($suffusion_taxonomy_labels)) {
-		$suffusion_taxonomy_labels = array(
-			array('name' => 'name', 'type' => 'text', 'desc' => 'Name (e.g. Genres)', 'std' => '', 'reqd' => true),
-			array('name' => 'singular_name', 'type' => 'text', 'desc' => 'Singular Name (e.g. Genre)', 'std' => '', 'reqd' => true),
-			array('name' => 'search_items', 'type' => 'text', 'desc' => 'Text for "Search Items" (e.g. Search Genres)', 'std' => ''),
-			array('name' => 'popular_items', 'type' => 'text', 'desc' => 'Text for "Popular Items" (e.g. Popular Genres)', 'std' => ''),
-			array('name' => 'all_items', 'type' => 'text', 'desc' => 'Text for "All Items" (e.g. All Genres)', 'std' => ''),
-			array('name' => 'parent_item', 'type' => 'text', 'desc' => 'Parent Item (e.g. Parent Genre)', 'std' => ''),
-			array('name' => 'parent_item_colon', 'type' => 'text', 'desc' => 'Parent Item Colon (e.g. Parent Genre:)', 'std' => ''),
-			array('name' => 'edit_item', 'type' => 'text', 'desc' => 'Text for "Edit Item" (e.g. Edit Genre)', 'std' => ''),
-			array('name' => 'update_item', 'type' => 'text', 'desc' => 'Text for "Update Item" (e.g. Update Genre)', 'std' => ''),
-			array('name' => 'add_new_item', 'type' => 'text', 'desc' => 'Text for "Add New Item" (e.g. Add New Genre)', 'std' => ''),
-			array('name' => 'new_item_name', 'type' => 'text', 'desc' => 'Text for "New Item Name" (e.g. New Genre Name)', 'std' => ''),
-		);
-	}
-
-	if (!isset($suffusion_taxonomy_args)) {
-		$suffusion_taxonomy_args = array(
-			array('name' => 'public', 'desc' => 'Public', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'show_ui', 'desc' => 'Show UI', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'show_tagcloud', 'desc' => 'Show in Tagcloud widget', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'hierarchical', 'desc' => 'Hierarchical', 'type' => 'checkbox', 'default' => true),
-			array('name' => 'rewrite', 'desc' => 'Rewrite', 'type' => 'checkbox', 'default' => true),
-		);
-	}
-}
-
-/**
  * Add support for various theme functions
  * @return void
  */
@@ -161,7 +71,6 @@ function suffusion_add_theme_supports() {
 		add_custom_background();
 	}
 	else {
-		add_theme_support('custom-background');
 		$header_args = array(
 			'wp-head-callback' => 'suffusion_header_style',
 			'admin-head-callback' => 'suffusion_admin_header_style',
@@ -169,6 +78,7 @@ function suffusion_add_theme_supports() {
 			'random-default' => false,
 		);
 
+		$body_args = array();
 		$options = get_option('suffusion_options');
 		$theme_name = suffusion_get_theme_name();
 		if (!isset($options) || !is_array($options) || $theme_name == 'root') {
@@ -176,6 +86,9 @@ function suffusion_add_theme_supports() {
 			$header_args['width'] = apply_filters('suffusion_header_image_width', 1000);
 			$header_args['height'] = apply_filters('suffusion_header_image_height', 55);
 			$header_args['flex-width'] = false;
+
+			$body_args['default-color'] = '444444';
+			$body_args['default-image'] = '';
 		}
 		else {
 			$defaults = array(
@@ -190,10 +103,15 @@ function suffusion_add_theme_supports() {
 				'suf_header_layout_style' => 'theme', // out-hcfull || out-hcalign || out-cfull-halign || in-align
 
 				'suf_header_style_setting' => 'theme', // custom
-				'suf_blog_title_color' => suffusion_evaluate_style("suf_blog_title_color", $theme_name),
+				'suf_blog_title_color' => suffusion_evaluate_style('suf_blog_title_color', $theme_name),
 				'suf_header_height' => '55', // option check: suf_header_style_setting
+
+				'suf_body_style_setting' => 'theme', // custom
+				'suf_body_background_color' => suffusion_evaluate_style('suf_body_background_color', $theme_name),
+				'suf_body_background_image' => suffusion_evaluate_style('suf_body_background_image', $theme_name, 'empty'),
 			);
 			$options = wp_parse_args((array)$options, $defaults);
+
 			if ($options['suf_header_style_setting'] == 'custom') {
 				$header_args['height'] = $options['suf_header_height'] + 30;
 				$header_args['default-text-color'] = ltrim($options['suf_blog_title_color'], '#');
@@ -238,9 +156,19 @@ function suffusion_add_theme_supports() {
 					}
 				}
 			}
+
+			if ($options['suf_body_style_setting'] == 'custom') {
+				$body_args['default-color'] = ltrim($options['suf_body_background_color'], '#');
+				$body_args['default-image'] = $options['suf_body_background_image'];
+			}
+			else {
+				$body_args['default-color'] = ltrim(suffusion_evaluate_style('suf_body_background_color', $theme_name), '#');
+				$body_args['default-image'] = suffusion_evaluate_style('suf_body_background_image', $theme_name, 'empty');
+			}
 		}
 
 		add_theme_support('custom-header', $header_args);
+		add_theme_support('custom-background', $body_args);
 	}
 }
 
@@ -251,10 +179,8 @@ function suffusion_add_theme_supports() {
  * @return void
  */
 function suffusion_include_files() {
-	global $suffusion_unified_options, $suffusion_options, $suffusion_interactive_text_fields;
+	global $suffusion_unified_options, $suffusion_interactive_text_fields;
 	$template_path = get_template_directory();
-
-//	require_once (get_template_directory() . "/admin/theme-definitions.php");
 
 	$suffusion_unified_options = suffusion_get_unified_options();
 	if (function_exists('icl_t')) {
@@ -265,8 +191,10 @@ function suffusion_include_files() {
 	$widgets = new Suffusion_Widgets();
 	$widgets->init();
 
+	if (function_exists('icl_t')) {
+		include_once ($template_path . "/functions/wpml-integration.php");
+	}
 	require_once ($template_path . "/suffusion.php");
-	include_once ($template_path . "/functions/wpml-integration.php");
 }
 
 /**
@@ -357,6 +285,7 @@ function suffusion_setup_standard_actions_and_filters() {
  */
 function suffusion_setup_custom_actions_and_filters() {
 	///// ACTIONS
+	add_action('suffusion_document_header', 'suffusion_include_responsive_meta');
 	add_action('suffusion_document_header', 'suffusion_include_ie7_compatibility_mode');
 	add_action('suffusion_document_header', 'suffusion_set_title');
 	add_action('suffusion_document_header', 'suffusion_include_meta');
@@ -652,82 +581,18 @@ function suffusion_new_vars($public_query_vars) {
  * @since 3.7.4
  */
 function suffusion_generate_all_custom_styles($echo = false) {
-	global $suf_size_options, $suf_sidebar_count, $suf_minify_css;
-	$suffusion_custom_css_string = "";
+	global $suf_enable_responsive;
 
 	$template_path = get_template_directory();
 	include_once ($template_path . '/suffusion-css-helper.php');
 	include_once ($template_path . '/suffusion-css-generator.php');
 
+	if (isset($suf_enable_responsive) && $suf_enable_responsive == 'on') {
+		include_once($template_path.'/responsive-css.php');
+	}
+
 	$suffusion_css_generator = new Suffusion_CSS_Generator(date(get_option('date_format').' '.get_option('time_format')));
-
-	$suffusion_custom_css_string .= "/* ".$suffusion_css_generator->get_creation_date()." */";
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_body_settings();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_wrapper_settings();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_post_bg_settings();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_body_font_settings();
-
-	$suffusion_template_prefixes = suffusion_get_template_prefixes();
-	$suffusion_template_sidebars = suffusion_get_template_sidebars();
-	foreach ($suffusion_template_prefixes as $template => $prefix) {
-		$sb_count = $suffusion_template_sidebars[$template];
-		$suffusion_template_widths = $suffusion_css_generator->get_widths_for_template($prefix, $sb_count, $template);
-		$template_class = '.page-template-'.str_replace('.', '-', $template);
-		$suffusion_custom_css_string .= $suffusion_css_generator->get_template_specific_classes($template_class, $suffusion_template_widths);
-	}
-
-	if ($suf_size_options == "custom") {
-		$suffusion_template_widths = $suffusion_css_generator->get_widths_for_template(false, $suf_sidebar_count);
-	}
-	else {
-		// We still need to get the array of widths for the sidebars.
-		$suffusion_template_widths = $suffusion_css_generator->get_automatic_widths(1000, $suf_sidebar_count, false);
-	}
-
-	// The default settings:
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_template_specific_classes('', $suffusion_template_widths);
-
-	// For the no-sidebars.php template (uses the same widths as computed for the default settings):
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_zero_sidebars_template_widths();
-
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_mag_template_widths($suffusion_template_widths);
-
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_date_box_css();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_byline_css();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_header_settings();
-
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_tbrh_css();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_wabh_css();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_waaf_css();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_featured_css();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_emphasis_css();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_layout_template_css();
-
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_tiled_layout_css($suffusion_template_widths);
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_finalized_header_footer_nav_css();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_nr_css($suffusion_template_widths);
-
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_navigation_bar_custom_css('nav');
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_navigation_bar_custom_css('nav-top');
-
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_miscellaneous_css();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_custom_sidebar_settings_css();
-
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_typography_css();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_icon_set_css();
-	$suffusion_custom_css_string .= $suffusion_css_generator->get_post_format_widths_css();
-
-	if ($suf_minify_css == 'minify') {
-		$suffusion_custom_css_string = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $suffusion_custom_css_string);
-		/* remove tabs, spaces, newlines, etc. */
-		$suffusion_custom_css_string = str_replace(array("\r\n", "\r", "\n", "\t"), '', $suffusion_custom_css_string);
-		$suffusion_custom_css_string = str_replace(array('  ', '   ', '    ', '     '), ' ', $suffusion_custom_css_string);
-		$suffusion_custom_css_string = str_replace(array(": ", " :"), ':', $suffusion_custom_css_string);
-		$suffusion_custom_css_string = str_replace(array(" {", "{ "), '{', $suffusion_custom_css_string);
-		$suffusion_custom_css_string = str_replace(';}','}', $suffusion_custom_css_string);
-		$suffusion_custom_css_string = str_replace(', ', ',', $suffusion_custom_css_string);
-		$suffusion_custom_css_string = str_replace('; ', ';', $suffusion_custom_css_string);
-	}
+	$suffusion_custom_css_string = $suffusion_css_generator->generate_all_css();
 
 	if ($echo) {
 		echo $suffusion_custom_css_string;
@@ -1054,7 +919,7 @@ function suffusion_get_formatted_link_array() {
 }
 
 function suffusion_get_formatted_wp_menu_array() {
-	global $menu_array;
+	global $suffusion_menu_array;
 	$ret = array();
 
 	$menus = wp_get_nav_menus();
@@ -1062,22 +927,17 @@ function suffusion_get_formatted_wp_menu_array() {
 		$menus = array();
 	}
 
-	foreach ($menus as $menu) {
-		if ($menu_array == null) {
+	if ($suffusion_menu_array == null) {
+		foreach ($menus as $menu) {
 			$ret[$menu->term_id] = array("title" => $menu->name);
 		}
+		$suffusion_menu_array = $ret;
 	}
 
-	if ($menu_array == null) {
-		$menu_array = $ret;
-		return $menu_array;
-	}
-	else {
-		return $menu_array;
-	}
+	return $suffusion_menu_array;
 }
 
-function suffusion_get_formatted_options_array($prefix, $options_array) {
+function suffusion_get_formatted_options_array($options_array) {
 	$ret = array();
     foreach ($options_array as $option_key => $option_value) {
         $ret[$option_key] = array('title' => $option_value, 'depth' => 1);
@@ -1136,22 +996,25 @@ function suffusion_get_rotating_image($folder) {
 
 	$files = array(); $i = -1; // Initialize some variables
 //	if ('' == $folder) $folder = './';
-	$content_folder = trailingslashit(WP_CONTENT_DIR)."/".$folder;
+	$content_folder = trailingslashit(WP_CONTENT_DIR).$folder;
 
 	$handle = opendir($content_folder);
-	$exts = explode(' ', $exts);
-	while (false !== ($file = readdir($handle))) {
-		foreach($exts as $ext) { // for each extension check the extension
-			if (preg_match('/\.'.$ext.'$/i', $file, $test)) { // faster than ereg, case insensitive
-				$files[] = $file; // it's good
-				++$i;
+	if ($handle) {
+		$exts = explode(' ', $exts);
+		while (false !== ($file = readdir($handle))) {
+			foreach($exts as $ext) { // for each extension check the extension
+				if (preg_match('/\.'.$ext.'$/i', $file, $test)) { // faster than ereg, case insensitive
+					$files[] = $file; // it's good
+					++$i;
+				}
 			}
 		}
+		closedir($handle); // We're not using it anymore
+		mt_srand((double)microtime()*1000000); // seed for PHP < 4.2
+		$rand = mt_rand(0, $i); // $i was incremented as we went along
+		return trailingslashit(WP_CONTENT_URL).trailingslashit($folder).$files[$rand];
 	}
-	closedir($handle); // We're not using it anymore
-	mt_srand((double)microtime()*1000000); // seed for PHP < 4.2
-	$rand = mt_rand(0, $i); // $i was incremented as we went along
-	return trailingslashit(WP_CONTENT_URL).trailingslashit($folder).$files[$rand];
+	return '';
 }
 
 
@@ -1175,6 +1038,28 @@ function suffusion_get_custom_post_types($built_in = false) {
 	$post_types = get_post_types(array('public' => true, '_builtin' => false), 'objects');
 	foreach ($post_types as $post_type) {
 		$ret[$post_type->name] = $post_type->labels->name." (".$post_type->name.")";
+	}
+	return $ret;
+}
+
+/**
+ * Returns an array of public custom taxonomies. The name of the taxonomy is the key and the label name is the value.
+ *
+ * @param bool $built_in
+ * @return array
+ */
+function suffusion_get_custom_taxonomies($built_in = false) {
+	$ret = array();
+	if ($built_in) {
+		$taxonomies = get_taxonomies(array('public' => true, '_builtin' => true), 'objects');
+		foreach ($taxonomies as $taxonomy) {
+			$ret[$taxonomy->name] = $taxonomy->labels->name." (".$taxonomy->name.")";
+		}
+	}
+
+	$taxonomies = get_taxonomies(array('public' => true, '_builtin' => false), 'objects');
+	foreach ($taxonomies as $taxonomy) {
+		$ret[$taxonomy->name] = $taxonomy->labels->name." (".$taxonomy->name.")";
 	}
 	return $ret;
 }
@@ -1428,4 +1313,38 @@ function suffusion_customize_preview() {
 	});
 </script>
 <?php
+}
+
+function suffusion_get_horizontal_components($include = array(), $exclude = array()) {
+	$base = array(
+		'widgets-above-header' => 'Widgets Above Header',
+		'header-widgets' => 'Widgets in Header',
+		'horizontal-outer-widgets-1' => 'Widget Area Below Header',
+		'horizontal-outer-widgets-2' => 'Widget Area Above Footer',
+		'ad-hoc-1' => 'Ad Hoc Widget Area 1',
+		'ad-hoc-2' => 'Ad Hoc Widget Area 2',
+		'ad-hoc-3' => 'Ad Hoc Widget Area 3',
+		'ad-hoc-4' => 'Ad Hoc Widget Area 4',
+		'ad-hoc-5' => 'Ad Hoc Widget Area 5',
+		'cl-warea-id-1' => 'Custom Layout Template Widget Area 1',
+		'cl-warea-id-2' => 'Custom Layout Template Widget Area 2',
+		'cl-warea-id-3' => 'Custom Layout Template Widget Area 3',
+		'cl-warea-id-4' => 'Custom Layout Template Widget Area 4',
+		'cl-warea-id-5' => 'Custom Layout Template Widget Area 5',
+		'suf-mag-excerpts' => 'Magazine Layout Excerpts',
+		'suf-mag-categories' => 'Magazine Layout Category Blocks',
+		'suf-tiles' => 'Tile Layout',
+		'mega-menus' => 'Mega Menus',
+	);
+	foreach ($include as $element => $label) {
+		if (!isset($base[$element])) {
+			$base[$element] = $label;
+		}
+	}
+	foreach ($exclude as $element => $label) {
+		if (isset($base[$element])) {
+			unset($base[$element]);
+		}
+	}
+	return $base;
 }

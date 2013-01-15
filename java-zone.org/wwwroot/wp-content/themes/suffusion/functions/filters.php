@@ -240,6 +240,20 @@ function suffusion_excerpt_more_append($output) {
  * @return array
  */
 function suffusion_extra_post_classes($classes) {
+	global $post;
+	global $bbp; // Check for bbPress < 2.1
+	if (!isset($bbp) && function_exists('bbpress')) {
+		$bbp = bbpress();
+	}
+
+	// If this is a bbPress post type, bail. Otherwise the display of bbPress tables will get hammered.
+	if (isset($bbp) &&
+			((isset($bbp->forum_post_type) && $post->post_type == $bbp->forum_post_type) ||
+			(isset($bbp->topic_post_type) && $post->post_type == $bbp->topic_post_type) ||
+			(isset($bbp->reply_post_type) && $post->post_type == $bbp->reply_post_type))) {
+		return $classes;
+	}
+
 	static $suffusion_post_sequence;
 	global $suffusion_cpt_post_id;
 

@@ -6,6 +6,7 @@
  * @subpackage Templates
  */
 global $suffusion_unified_options, $suffusion_interactive_text_fields, $suffusion_translatable_fields, $suffusion_skin_dependence, $suf_color_scheme;
+
 if (function_exists('icl_t')) {
 	foreach ($suffusion_unified_options as $id => $value) {
 		/**
@@ -22,28 +23,29 @@ if (function_exists('icl_t')) {
 }
 ?>
 <!DOCTYPE html>
-<!--[if IE 6]>
-<html id="ie6" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 7]>
-<html id="ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html id="ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
-<!--<![endif]-->
+<!--[if IE 6]> <html id="ie6" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7]> <html id="ie7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]> <html id="ie8" <?php language_attributes(); ?>> <![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="zh-CN" />
+	<title>Java地带 | Java语言编程 Linux服务器应用 实践分享学习博客空间</title> 
+	<meta name="description" content="Java地带是一个以Java语言编程开发,Java企业级应用以及Android移动开发和Linux服务器等技术内容为基础的实践分享学习博客空间。" />
+	<meta name="keywords" content="Java地带,Java博客,Java空间,Linux空间,Java语言编程,JavaWeb网络开发,JavaEE企业应用,Android移动开发,Linux服务器应用" />
+	<base href="http://www.java-zone.org/" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <?php
-	suffusion_document_header();
+	//隐藏主题自带的标题
+	//suffusion_document_header();
+	//echo "yk-1";
 	if (is_singular()) {
 		wp_enqueue_script('comment-reply');
 	}
+	//echo "yk-2";
 ?>
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/scripts/html5.js" type="text/javascript"></script>
