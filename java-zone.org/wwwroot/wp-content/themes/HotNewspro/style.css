@@ -1130,8 +1130,8 @@ big {
 /** UD-AD **/ 
 .ad_r {   
     float:right;   
-    width:250px;   
-    height:250px;   
+    width:200px;   
+    height:200px;   
     margin:0 0 10px 10px;   
     border:1px solid #ccc;   
     }  
