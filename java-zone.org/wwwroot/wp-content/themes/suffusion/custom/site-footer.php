@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * The site footer. This file should not be loaded by itself, but should instead be included using get_template_part or locate_template.
  * Replacing this file in a child theme is the easiest and upgrade-safe way to "get rid of" the footer credits!
@@ -32,8 +32,8 @@ if ($suf_footer_layout_style != 'in-align') {
 				<td class="cred-center"><?php $strip = stripslashes($suf_footer_center); $strip = wp_specialchars_decode($strip, ENT_QUOTES); echo do_shortcode($strip); ?></td>
 				<td class="cred-right">
 					<a href="http://aquoid.com/news/themes/suffusion/">Suffusion theme by Sayontan Sinha</a>&nbsp;
-					<a href="http://www.java-zone.org/sitemap_baidu.xml" target="_blank">百度地图</a>&nbsp;
-					<a href="http://www.java-zone.org/sitemap.xml" target="_blank">谷歌地图</a>
+					<a href="http://www.java-zone.org/sitemap_baidu.xml" target="_blank">�ٶȵ�ͼ</a>&nbsp;
+					<a href="http://www.java-zone.org/sitemap.xml" target="_blank">�ȸ��ͼ</a>
 				</td>
 			</tr>
 		</table>
