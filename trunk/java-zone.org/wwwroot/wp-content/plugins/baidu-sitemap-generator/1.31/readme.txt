@@ -1,4 +1,4 @@
-===Baidu Sitemap Generator===
+﻿===Baidu Sitemap Generator===
 Contributors: 柳城
 Tags: Baidu,XML,Sitemap
 Requires at least: 2.7

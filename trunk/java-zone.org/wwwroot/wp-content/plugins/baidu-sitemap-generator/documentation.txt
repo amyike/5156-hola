@@ -1,4 +1,4 @@
- Baidu Sitemap Generator for WordPress
+﻿ Baidu Sitemap Generator for WordPress
  ==============================================================================
 
   
