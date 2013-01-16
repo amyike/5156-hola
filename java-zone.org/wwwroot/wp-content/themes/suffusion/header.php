@@ -31,10 +31,9 @@ if (function_exists('icl_t')) {
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta http-equiv="Content-Language" content="zh-CN" />
-	<title>Java地带 | Java语言编程 Linux服务器应用 实践分享学习博客空间</title> 
-	<meta name="description" content="Java地带是一个以Java语言编程开发,Java企业级应用以及Android移动开发和Linux服务器等技术内容为基础的实践分享学习博客空间。" />
-	<meta name="keywords" content="Java地带,Java博客,Java空间,Linux空间,Java语言编程,JavaWeb网络开发,JavaEE企业应用,Android移动开发,Linux服务器应用" />
+	<?php include('_includes/seo.php'); ?>
 	<base href="http://www.java-zone.org/" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
