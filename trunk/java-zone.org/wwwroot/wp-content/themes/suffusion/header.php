@@ -38,7 +38,7 @@ if (function_exists('icl_t')) {
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <?php
-	//éšè—ä¸»é¢˜è‡ªå¸¦çš„æ ‡é¢˜
+	//Òþ²ØÖ÷Ìâ×Ô´øµÄ±êÌâ
 	//suffusion_document_header();
 	//echo "yk-1";
 	if (is_singular()) {
