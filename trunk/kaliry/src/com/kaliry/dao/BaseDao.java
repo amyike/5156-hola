@@ -35,8 +35,11 @@ public abstract class BaseDao<T> extends HibernateDaoSupport implements
 	@Override
 	public List<T> findListByCriteria(final DetachedCriteria criteria,
 			final int firstResult, final int maxResults) {
-		return getHibernateTemplate().findByCriteria(criteria, firstResult,
-				maxResults);
+		if (maxResults > 0) {
+			return getHibernateTemplate().findByCriteria(criteria, firstResult,
+					maxResults);
+		}
+		return getHibernateTemplate().findByCriteria(criteria);
 	}
 
 	@Override
