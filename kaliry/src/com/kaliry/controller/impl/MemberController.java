@@ -357,12 +357,14 @@ public class MemberController extends BaseController {
 		}
 
 		try {
-			int count = memberService.count(criteria);
+			// int count = memberService.count(criteria);
+
 			List<Member> memberList = memberService.findListByCriteria(
-					criteria, 0, count);
+					criteria, 0, 0);
 
 			response.reset();
-			response.setContentType("application/octet-stream;charset=GB2312");
+			response.setContentType("application/octet-stream;charset=GBK");// GB2312-(旻)乱码
+																			// UTF-8时word2003(excel)乱码
 			PrintWriter out = null;
 
 			if ("tradeRecord".equals(type)) {
@@ -399,6 +401,7 @@ public class MemberController extends BaseController {
 				out.println("申请表编号,会员卡号,姓名,联系方式,地区,送货地址,身份证,服务专员编号,服务专员姓名,受理人,录入日期,激活日期,激活/弃用,当前积分");
 				for (Member member : memberList) {
 					out.println(member.toString());
+
 					out.flush();
 				}
 			}
