@@ -12,10 +12,6 @@ import com.kaliry.pojo.impl.Master;
  * 
  */
 @Repository
-public class MasterDao extends BaseDao<Master> {
-
-	public MasterDao() {
-		super(Master.class);
-	}
+public class MasterDao extends BaseDao<Integer, Master> {
 
 }
