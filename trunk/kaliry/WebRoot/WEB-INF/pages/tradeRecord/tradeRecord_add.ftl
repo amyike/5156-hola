@@ -47,7 +47,7 @@ table {
 		</tr>
 		<tr bgcolor="#EEEEEE" align="center">
 			<td><font color="red">*</font>单价</td>
-			<td><input name="price" msg="单价"></td>
+			<td><input name="price" msg="单价" readonly></td>
 		</tr>
 		<tr bgcolor="#EEEEEE" align="center">
 			<td><font color="red">*</font>总计金额</td>
@@ -65,9 +65,20 @@ table {
 		</tr>
 	</table>
 </form>
+</body>
 <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
 <script src="/js/edit.js" type="text/javascript"></script>
 <script type="text/javascript">
+
+	$("input[name=itemNo]").keyup(function(){
+		$.get("/product/getProductById", {itemNo: $(this).val()}, function(retVal){
+			if(retVal.status){
+				//alert(retVal.data);
+				$("input[name=name]").val(retVal.data.name);
+				$("input[name=price]").val(retVal.data.price);
+			}
+		});
+	});
 
 	$("input[name=number]").keyup(function(){
 		var number = $.trim($(this).val());
@@ -107,8 +118,6 @@ table {
 			$("form").submit();
 		}
 	}
-	
 </script>
-</body>
 </html>
 </#escape>
