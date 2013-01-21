@@ -5,16 +5,20 @@ import java.util.List;
 
 import org.hibernate.criterion.DetachedCriteria;
 
+import com.kaliry.pojo.BasePojo;
+
 /**
  * 
  * @author yike
  * 
- * @see Dao 层基类
+ * @see Base Dao Interface
  * 
+ * @param <PK>
+ *            PrimaryKey
  * @param <T>
  *            Type
  */
-public interface IBaseDao<T> {
+public interface IBaseDao<PK extends Serializable, T extends BasePojo> {
 
 	/**
 	 * 根据 ID(主键) 查询
@@ -22,7 +26,7 @@ public interface IBaseDao<T> {
 	 * @param ID
 	 * @return @
 	 */
-	T findByID(final Serializable Id);
+	T findByID(final PK Id);
 
 	/**
 	 * 根据条件查询
@@ -47,6 +51,14 @@ public interface IBaseDao<T> {
 			final int firstResult, final int maxResults);
 
 	/**
+	 * 根据条件查询数据
+	 * 
+	 * @param criteria
+	 * @return
+	 */
+	List<T> findListByCriteria(final DetachedCriteria criteria);
+
+	/**
 	 * 根据条件查询数据总数
 	 * 
 	 * @param criteria
@@ -69,11 +81,18 @@ public interface IBaseDao<T> {
 	void update(final T pojo);
 
 	/**
+	 * 删除
+	 * 
+	 * @param id
+	 */
+	void delete(final T pojo);
+
+	/**
 	 * 根据 id 删除
 	 * 
 	 * @param id
 	 */
-	void deleteByID(final Serializable id);
+	T deleteByID(final PK id);
 
 	/**
 	 * 根据 条件 删除
