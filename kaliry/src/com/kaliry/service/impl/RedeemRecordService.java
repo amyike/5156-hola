@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kaliry.dao.IBaseDao;
+import com.kaliry.dao.BaseDao;
 import com.kaliry.dao.impl.RedeemRecordDao;
 import com.kaliry.pojo.impl.RedeemRecord;
 import com.kaliry.service.BaseService;
@@ -23,7 +23,7 @@ public class RedeemRecordService extends BaseService<Integer, RedeemRecord> {
 	private RedeemRecordDao recordDao;
 
 	@Override
-	public IBaseDao<Integer, RedeemRecord> getDao() {
+	public BaseDao<Integer, RedeemRecord> getDao() {
 		return recordDao;
 	}
 
