@@ -1,28 +1,31 @@
 package com.kaliry.dao;
 
 import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Projections;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-public abstract class BaseDao<T> extends HibernateDaoSupport implements
-		IBaseDao<T> {
+import com.kaliry.pojo.BasePojo;
 
-	private Class<T> clasz;
+public abstract class BaseDao<PK extends Serializable, T extends BasePojo>
+		extends HibernateDaoSupport implements IBaseDao<PK, T> {
 
-	public BaseDao(Class<T> clasz) {
-		this.clasz = clasz;
+	private Class<T> entityClass;
+
+	@SuppressWarnings("unchecked")
+	public BaseDao() {
+		entityClass = (Class<T>) ((ParameterizedType) getClass()
+				.getGenericSuperclass()).getActualTypeArguments()[1];
 	}
 
-	// protected Criteria getCriteria() {
-	// return getSession().createCriteria(clasz);
-	// }
+	// protected abstract Class<T> getClasz();
 
 	@Override
-	public T findByID(final Serializable id) {
-		return getHibernateTemplate().get(clasz, id);
+	public T findByID(final PK id) {
+		return getHibernateTemplate().get(entityClass, id);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -39,6 +42,12 @@ public abstract class BaseDao<T> extends HibernateDaoSupport implements
 			return getHibernateTemplate().findByCriteria(criteria, firstResult,
 					maxResults);
 		}
+		return getHibernateTemplate().findByCriteria(criteria);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<T> findListByCriteria(final DetachedCriteria criteria) {
 		return getHibernateTemplate().findByCriteria(criteria);
 	}
 
@@ -62,8 +71,16 @@ public abstract class BaseDao<T> extends HibernateDaoSupport implements
 	}
 
 	@Override
-	public void deleteByID(final Serializable id) {
-		getHibernateTemplate().delete(findByID(id));
+	public void delete(T pojo) {
+		getHibernateTemplate().delete(pojo);
+	}
+
+	@Override
+	public T deleteByID(final PK id) {
+		T t = findByID(id);
+		if (t != null)
+			delete(t);
+		return t;
 	}
 
 	@Override
