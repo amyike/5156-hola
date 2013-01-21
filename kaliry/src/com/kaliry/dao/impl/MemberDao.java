@@ -12,10 +12,6 @@ import com.kaliry.pojo.impl.Member;
  * 
  */
 @Repository
-public class MemberDao extends BaseDao<Member> {
-
-	public MemberDao() {
-		super(Member.class);
-	}
+public class MemberDao extends BaseDao<Integer, Member> {
 
 }
