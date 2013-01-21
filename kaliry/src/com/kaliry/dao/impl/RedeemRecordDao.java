@@ -12,10 +12,6 @@ import com.kaliry.pojo.impl.RedeemRecord;
  * 
  */
 @Repository
-public class RedeemRecordDao extends BaseDao<RedeemRecord> {
-
-	public RedeemRecordDao() {
-		super(RedeemRecord.class);
-	}
+public class RedeemRecordDao extends BaseDao<Integer, RedeemRecord> {
 
 }
