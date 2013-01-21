@@ -12,10 +12,6 @@ import com.kaliry.pojo.impl.TradeRecord;
  * 
  */
 @Repository
-public class TradeRecordDao extends BaseDao<TradeRecord> {
-
-	public TradeRecordDao() {
-		super(TradeRecord.class);
-	}
+public class TradeRecordDao extends BaseDao<Integer, TradeRecord> {
 
 }
