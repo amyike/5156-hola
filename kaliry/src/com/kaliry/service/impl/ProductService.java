@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.kaliry.dao.IBaseDao;
-import com.kaliry.dao.impl.MemberDao;
-import com.kaliry.pojo.impl.Member;
+import com.kaliry.dao.impl.ProductDao;
+import com.kaliry.pojo.impl.Product;
 import com.kaliry.service.BaseService;
 
 /**
@@ -17,14 +17,14 @@ import com.kaliry.service.BaseService;
  */
 @Service
 @Transactional
-public class MemberService extends BaseService<Integer, Member> {
+public class ProductService extends BaseService<Integer, Product> {
 
 	@Autowired
-	private MemberDao memberDao;
+	private ProductDao productDao;
 
 	@Override
-	public IBaseDao<Integer, Member> getDao() {
-		return memberDao;
+	public IBaseDao<Integer, Product> getDao() {
+		return productDao;
 	}
 
 }

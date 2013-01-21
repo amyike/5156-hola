@@ -17,13 +17,13 @@ import com.kaliry.service.BaseService;
  */
 @Service
 @Transactional
-public class MasterService extends BaseService<Master> {
+public class MasterService extends BaseService<Integer, Master> {
 
 	@Autowired
 	private MasterDao masterDao;
 
 	@Override
-	public IBaseDao<Master> getDao() {
+	public IBaseDao<Integer, Master> getDao() {
 		return masterDao;
 	}
 
