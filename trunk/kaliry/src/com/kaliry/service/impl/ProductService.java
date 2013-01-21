@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kaliry.dao.IBaseDao;
+import com.kaliry.dao.BaseDao;
 import com.kaliry.dao.impl.ProductDao;
 import com.kaliry.pojo.impl.Product;
 import com.kaliry.service.BaseService;
@@ -23,7 +23,7 @@ public class ProductService extends BaseService<Integer, Product> {
 	private ProductDao productDao;
 
 	@Override
-	public IBaseDao<Integer, Product> getDao() {
+	public BaseDao<Integer, Product> getDao() {
 		return productDao;
 	}
 

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kaliry.dao.IBaseDao;
+import com.kaliry.dao.BaseDao;
 import com.kaliry.dao.impl.MemberDao;
 import com.kaliry.pojo.impl.Member;
 import com.kaliry.service.BaseService;
@@ -23,7 +23,7 @@ public class MemberService extends BaseService<Integer, Member> {
 	private MemberDao memberDao;
 
 	@Override
-	public IBaseDao<Integer, Member> getDao() {
+	public BaseDao<Integer, Member> getDao() {
 		return memberDao;
 	}
 
