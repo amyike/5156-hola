@@ -119,6 +119,7 @@ public class MemberController extends BaseController {
 			List<Member> memberList = memberService.findListByCriteria(
 					criteria, page.getFirst(), 30);
 			model.addAttribute("page", page.setElements(memberList));
+
 		} catch (BizException e) {
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
