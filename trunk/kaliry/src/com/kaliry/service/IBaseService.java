@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.hibernate.criterion.DetachedCriteria;
 
-import com.kaliry.dao.IBaseDao;
+import com.kaliry.dao.BaseDao;
 import com.kaliry.exception.BizException;
 import com.kaliry.pojo.BasePojo;
 
@@ -22,7 +22,7 @@ import com.kaliry.pojo.BasePojo;
  */
 public interface IBaseService<PK extends Serializable, T extends BasePojo> {
 
-	IBaseDao<PK, T> getDao();
+	BaseDao<PK, T> getDao();
 
 	/**
 	 * 根据 ID 查询
